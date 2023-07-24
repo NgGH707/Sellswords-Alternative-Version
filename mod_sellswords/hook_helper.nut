@@ -398,7 +398,9 @@
 
 	addPerkTree = function( _actor, _tree, _maxTier = 7 )
 	{
-		for (local i = 0; i < _maxTier; i++)
+		local max = _maxTier > _tree.Tree.len() - 1 ? _tree.Tree.len() - 1 : _maxTier; 
+
+		for (local i = 0; i < max; i++)
 		{
 			foreach (perk in _tree.Tree[i])
 			{

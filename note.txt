@@ -1,0 +1,25 @@
+- Actives:
+
+scripts\skills\actives\cr_delay.nut  (Icon: "skills/ptr_dynamic_duo_active.png", Disabled Icon: "skills/ptr_dynamic_duo_active_bw.png", IconMini: "ptr_dynamic_duo_mini")
+
+
+- Effects:
+
+scripts\skills\effects\crbonebreaker_effect.nut  (Icon: "ui/perks/ptr_bone_breaker.png")
+
+scripts\skills\effects\cr_delay_buff_effect.nut  (Icon: "ui/perks/ptr_dynamic_duo.png", IconMini: "ptr_dynamic_duo_mini")
+
+scripts\skills\effects\cr_delay_debuff_effect.nut  (Icon: "ui/perks/ptr_dynamic_duo.png", IconMini: "ptr_dynamic_duo_mini")
+
+scripts\skills\effects\cr_fragile_effect.nut  (Icon: "ui/perks/ptr_wear_them_down.png", Overlay Icon: "ptr_worn_down_effect", IconMini: "ptr_worn_down_effect_mini")
+
+scripts\skills\effects\ptr_exhausted_effect_severe.nut  (Icon: "skills/ptr_exhausted_effect.png", Overlay Icon: "ptr_exhausted_effect", IconMini: "ptr_exhausted_effect_mini")
+
+scripts\skills\effects\ptr_fresh_and_furious_effect.nut  (Icon: "ui/perks/ptr_fresh_and_furious.png")
+
+
+- Perks:
+
+scripts\skills\perks\perk_crBackswing.nut  (Overlay Icon: "perk_ptr_opportunist") 
+
+scripts\skills\perks\perk_crHonorheritage.nut  (Overlay Icon: "perk_ptr_exude_confidence") 

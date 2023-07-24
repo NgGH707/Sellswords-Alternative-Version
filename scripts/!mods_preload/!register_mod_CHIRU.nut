@@ -1,7 +1,7 @@
 ::Mod_Chirutiru <- {
 	ID = "mod_Chirutiru",
 	Name = "Sellswords",
-	Version = "5.4.0-alt.3",
+	Version = "5.4.0-alt.4",
 };
 
 ::mods_registerMod(::Mod_Chirutiru.ID, ::Mod_Chirutiru.Version, ::Mod_Chirutiru.Name);
