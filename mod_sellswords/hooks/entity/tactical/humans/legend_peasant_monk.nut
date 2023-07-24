@@ -28,7 +28,7 @@
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_strength_in_numbers"));
 		}
 
-		this.getSprite("socket").setBrush("bust_base_militia");			
+		this.getSprite("socket").setBrush("bust_base_militia");
 		
 		if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 		{
