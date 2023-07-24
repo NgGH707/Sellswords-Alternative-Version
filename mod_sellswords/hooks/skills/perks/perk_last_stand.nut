@@ -1,5 +1,7 @@
 ::mods_hookExactClass("skills/perks/perk_last_stand", function( o ) 
 {
+	o.m.IsSpent <- false;
+	
 	o.getTooltip = function ()
 	{
 		local tooltip = this.skill.getTooltip();

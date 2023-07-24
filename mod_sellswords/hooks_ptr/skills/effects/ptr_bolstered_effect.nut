@@ -149,9 +149,4 @@
 			_properties.RangedDefense += this.m.crBonus;			
 		}		
 	}
-	
-	o.onAdded <- function()
-	{
-		this.m.TurnsLeft = 10;
-	}
 })

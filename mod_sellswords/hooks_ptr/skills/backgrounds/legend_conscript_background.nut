@@ -4,7 +4,7 @@
 	{
 		ws_create()
 
-		this.m.PerkGroupMultipliers = [
+		this.m.PerkGroupMultipliers <- [
 			[1.33, this.Const.Perks.AgileTree],
 			[1.33, this.Const.Perks.FastTree],
 			[0.25, this.Const.Perks.OrganisedTree],

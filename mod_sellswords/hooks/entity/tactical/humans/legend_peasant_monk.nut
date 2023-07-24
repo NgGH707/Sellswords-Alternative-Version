@@ -18,14 +18,14 @@
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_rally_the_troops"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_mastery_staves"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_colossus"));
-		
-		local inspiringPresencePerk = this.new("scripts/skills/perks/perk_inspiring_presence");
-		inspiringPresencePerk.m.IsForceEnabled = true;
-		this.m.Skills.add(inspiringPresencePerk);
 
 		if (::Is_PTR_Exist)
 		{
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_strength_in_numbers"));
+
+			local inspiringPresencePerk = this.new("scripts/skills/perks/perk_inspiring_presence");
+			inspiringPresencePerk.m.IsForceEnabled = true;
+			this.m.Skills.add(inspiringPresencePerk);
 		}
 
 		this.getSprite("socket").setBrush("bust_base_militia");

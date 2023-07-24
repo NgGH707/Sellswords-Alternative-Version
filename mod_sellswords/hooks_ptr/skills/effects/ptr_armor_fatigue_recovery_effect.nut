@@ -121,7 +121,7 @@
 		}			
 	}
 
-	o.onBeforeDamageReceived = function( _attacker, _skill, _hitInfo, _properties )
+	o.onBeforeDamageReceived <- function( _attacker, _skill, _hitInfo, _properties )
 	{
 		if (_attacker != null)
 		{

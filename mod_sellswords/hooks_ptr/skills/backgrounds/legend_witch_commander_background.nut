@@ -12,12 +12,12 @@
 			this.Const.Perks.DaggerTree,
 			this.Const.Perks.TwoHandedTree
 		]);
-		::Mod_Chirutiru.HookHelper.clearCustomPerkTree(4, this.m.CustomPerkTree, [
+		::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(4, this.m.CustomPerkTree, [
 			this.Const.Perks.PerkDefs.LegendFavouredEnemyAlps,
 			this.Const.Perks.PerkDefs.LegendFavouredEnemyHexen,
 			this.Const.Perks.PerkDefs.LegendFavouredEnemyVampire
 		]);
-		::Mod_Chirutiru.HookHelper.clearCustomPerkTree(7, this.m.CustomPerkTree, [
+		::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
 			this.Const.Perks.PerkDefs.PTRRisingStar
 		]);
 	}
