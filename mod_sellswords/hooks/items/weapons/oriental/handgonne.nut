@@ -1,4 +1,4 @@
-::mods_hookExactClass("items/weapons/handgonne", function ( o )
+::mods_hookExactClass("items/weapons/oriental/handgonne", function ( o )
 {
 	local ws_create = o.create;
 	o.create = function()

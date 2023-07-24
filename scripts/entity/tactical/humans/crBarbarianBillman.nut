@@ -110,7 +110,7 @@ this.crBarbarianBillman <- this.inherit("scripts/entity/tactical/human", {
 			}	
 
 			//this.m.Skills.addTreeOfEquippedWeapon(5);
-			\::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
 			this.m.Skills.removeByID("perk.ptr_bloodlust");
 			this.m.Skills.removeByID("perk.ptr_dent_armor");
 		//}

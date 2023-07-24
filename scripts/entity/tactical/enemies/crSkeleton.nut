@@ -106,13 +106,22 @@ this.crSkeleton <- this.inherit("scripts/entity/tactical/skeleton", {
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Offhand))
 		{
 			this.m.Items.equip(this.new("scripts/items/shields/ancient/tower_shield"));
-			this.m.Skills.addPerkTree(this.Const.Perks.OneHandedTree);
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_str_phalanx"));			
+			
+			if (::Is_PTR_Exist)
+			{
+				this.m.Skills.addPerkTree(this.Const.Perks.OneHandedTree);
+				this.m.Skills.add(this.new("scripts/skills/perks/perk_str_phalanx"));	
+			}
+					
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_shield_expert"));				
 		}
 		else if (!this.m.Items.hasEmptySlot(this.Const.ItemSlot.Offhand))
 		{
-			this.m.Skills.addPerkTree(this.Const.Perks.TwoHandedTree);
+			if (::Is_PTR_Exist)
+			{
+				this.m.Skills.addPerkTree(this.Const.Perks.TwoHandedTree);
+			}
+			
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));			
 		}
