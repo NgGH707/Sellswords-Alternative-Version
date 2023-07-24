@@ -120,10 +120,11 @@ this.crZweihander_guest <- this.inherit("scripts/entity/tactical/player", {
 			this.m.Items.equip(this.new("scripts/items/weapons/greatsword"));
 		}		
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		
 		if (dc <= 80)
 		{

@@ -83,7 +83,7 @@ this.named_sword_abt_durandal <- this.inherit("scripts/items/weapons/weapon", {
 		this.addSkill(skillToAdd);
 		this.addSkill(this.new("scripts/skills/actives/split"));
 		
-		if (this.m.innateperk) return;			
+		if (!::Is_PTR_Exist || this.m.innateperk) return;			
 		this.addSkill(this.new("scripts/skills/actives/ptr_swordmaster_charge_skill"));		
 		this.addSkill(this.new("scripts/skills/effects/cr_sword_jugg_effect"));			
 	}	

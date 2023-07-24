@@ -115,10 +115,11 @@ this.crFootman_guest <- this.inherit("scripts/entity/tactical/player", {
 			this.m.Items.equip(this.new("scripts/items/weapons/morning_star"));
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(4);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(4);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);
 
 		r = this.Math.rand(1, 2);
 		local shield;

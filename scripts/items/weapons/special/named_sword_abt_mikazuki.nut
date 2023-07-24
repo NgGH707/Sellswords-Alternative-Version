@@ -81,7 +81,7 @@ this.named_sword_abt_mikazuki <- this.inherit("scripts/items/weapons/weapon", {
 		this.addSkill(this.new("scripts/skills/actives/gash_skill"));
 		this.addSkill(this.new("scripts/skills/actives/decapitate"));
 		
-		if (this.m.innateperk) return;
+		if (!::Is_PTR_Exist || this.m.innateperk) return;
 		//if (!this.getContainer().getActor().getSkills().hasSkill("perk.ptr_swordlike"))
 		//{
 		//	local skill = ::new("scripts/skills/perks/perk_ptr_swordlike");

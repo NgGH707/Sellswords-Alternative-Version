@@ -30,9 +30,11 @@
 	{
 		assignRandomEquipment();
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(5);
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(5);
+		//}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
 	}		
 });

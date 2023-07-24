@@ -154,10 +154,11 @@ this.crGoblinRider00 <- this.inherit("scripts/entity/tactical/goblin", {
 			}
 		}
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 });
 

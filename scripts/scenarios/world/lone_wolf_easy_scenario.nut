@@ -151,6 +151,8 @@ this.lone_wolf_easy_scenario <- this.inherit("scripts/scenarios/world/starting_s
 	
 	function onBuildPerkTree( _background )
 	{
+		if (!::Is_PTR_Exist) return;
+
 		this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.PTRPersonalArmor);
 	}		
 

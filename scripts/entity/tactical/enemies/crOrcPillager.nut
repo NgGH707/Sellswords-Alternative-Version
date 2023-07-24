@@ -434,9 +434,11 @@ this.crOrcPillager <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon(6);	
+			//this.m.Skills.addTreeOfEquippedWeapon(6);	
 			this.m.Skills.removeByID("perk.ptr_kata");
 		}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		local weapon = this.getMainhandItem();
 		if (weapon != null)

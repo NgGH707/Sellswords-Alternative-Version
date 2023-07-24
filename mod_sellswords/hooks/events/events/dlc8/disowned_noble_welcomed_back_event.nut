@@ -89,13 +89,17 @@
 
 					row = hasRow ? this.Math.max(0, this.Math.min(row, 6)) : _row;
 					bg.addPerk(_perk, row);
-				}				
-				if (sctors)
-				{				
-					addPerk(this.Const.Perks.PerkDefs.PTRRisingStar, 6);
-				}	
-				addPerk(this.Const.Perks.PerkDefs.PTRExudeConfidence, 0);				
-				addPerk(this.Const.Perks.PerkDefs.PTRFamilyPride, 2);					
+				}
+				if (::Is_PTR_Exist)
+				{
+					if (sctors)
+					{				
+						addPerk(this.Const.Perks.PerkDefs.PTRRisingStar, 6);
+					}	
+					addPerk(this.Const.Perks.PerkDefs.PTRExudeConfidence, 0);				
+					addPerk(this.Const.Perks.PerkDefs.PTRFamilyPride, 2);	
+				}
+								
 				//local oldPerkTree = _event.m.Disowned.getBackground().m.CustomPerkTree;				
 				//background.m.IsNew = false;
 				//_event.m.Disowned.getSkills().removeByID("background.disowned_noble");

@@ -51,7 +51,8 @@
 			"weapons/legend_heavy_goedendag"				
 		];
 		this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
-		this.m.Skills.addTreeOfEquippedWeapon();			
+		//this.m.Skills.addTreeOfEquippedWeapon();
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);	
 		if (dc <= 80)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickArmor([

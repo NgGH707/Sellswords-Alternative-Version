@@ -104,11 +104,11 @@
 			}
 		}
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon();
-		}
-		
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon();
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		this.m.Skills.removeByID("perk.ptr_kata");			
 	}
 	

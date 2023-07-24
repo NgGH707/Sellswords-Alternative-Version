@@ -15,8 +15,10 @@
 		if (_targetEntity.isNonCombatant())
 		{
 			return false;
-		}			
-		_targetEntity.getSkills().add(this.new("scripts/skills/effects/ptr_smackdown_debuff_effect"));			
+		}
+
+		if (::Is_PTR_Exist) _targetEntity.getSkills().add(this.new("scripts/skills/effects/ptr_smackdown_debuff_effect"));			
+		
 		if (_targetEntity.getCurrentProperties().IsImmuneToKnockBackAndGrab)
 		{
 			return false;

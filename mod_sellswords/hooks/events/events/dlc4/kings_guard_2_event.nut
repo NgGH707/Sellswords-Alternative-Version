@@ -88,13 +88,18 @@
 
 					row = hasRow ? this.Math.max(0, this.Math.min(row, 6)) : _row;
 					bg.addPerk(_perk, row);
-				}				
-				if (sctors)
-				{				
-					addPerk(this.Const.Perks.PerkDefs.PTRRisingStar, 6);
 				}
-				addPerk(this.Const.Perks.PerkDefs.PTRPatternRecognition, 0);				
-				addPerk(this.Const.Perks.PerkDefs.PTRProfessional, 3);					
+
+				if (::Is_PTR_Exist)
+				{
+					if (sctors)
+					{				
+						addPerk(this.Const.Perks.PerkDefs.PTRRisingStar, 6);
+					}
+					addPerk(this.Const.Perks.PerkDefs.PTRPatternRecognition, 0);				
+					addPerk(this.Const.Perks.PerkDefs.PTRProfessional, 3);
+				}	
+									
 				//local oldPerkTree = _event.m.Dude.getBackground().m.CustomPerkTree;				
 				//bg.m.IsNew = false;
 				//_event.m.Dude.getSkills().removeByID("background.cripple");

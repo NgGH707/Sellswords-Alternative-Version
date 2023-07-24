@@ -180,7 +180,11 @@ this.crDeathknight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 			];
 
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
-			this.m.Skills.addTreeOfEquippedWeapon();			
+			//if (::Is_PTR_Exist)
+			//{
+			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+			//}
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
 		}
 
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) == null)
@@ -237,11 +241,12 @@ this.crDeathknight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon();	
+			//this.m.Skills.addTreeOfEquippedWeapon();	
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_menacing"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bully"));	
 		}
-			
+		
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		return true;
 	}
 

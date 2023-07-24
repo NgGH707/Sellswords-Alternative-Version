@@ -36,11 +36,13 @@
 		
 		if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon(6);
+			//this.m.Skills.addTreeOfEquippedWeapon(6);
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
 		}
 		else
 		{
-			this.m.Skills.addTreeOfEquippedWeapon(5);
+			//this.m.Skills.addTreeOfEquippedWeapon(5);
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
 		}
 
 		this.m.Skills.removeByID("perk.ptr_kata");

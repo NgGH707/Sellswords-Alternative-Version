@@ -223,10 +223,12 @@ this.crSellsword <- this.inherit("scripts/entity/tactical/human", {
 			}										
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));							
 		}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);
+			//this.m.Skills.addTreeOfEquippedWeapon(7);
 
 			if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) != null)
 			{

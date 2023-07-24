@@ -149,7 +149,7 @@ this.crBanditSergeant <- this.inherit("scripts/entity/tactical/human", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);
+			//this.m.Skills.addTreeOfEquippedWeapon(7);
 
 			local mainhandItem = this.getMainhandItem();		    					
 			local attack = this.getSkills().getAttackOfOpportunity();			    
@@ -166,6 +166,8 @@ this.crBanditSergeant <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_duelist"));
 			}	
 		}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 	function makeMiniboss()

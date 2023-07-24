@@ -78,7 +78,7 @@ this.named_sword_abt_excalibur <- this.inherit("scripts/items/weapons/weapon", {
 		skillToAdd.setFatigueCost(skillToAdd.getFatigueCostRaw() + 5);
 		this.addSkill(skillToAdd);
 		
-		if (this.m.innateperk) return;				
+		if (!::Is_PTR_Exist || this.m.innateperk) return;				
 		local skill = ::new("scripts/skills/perks/perk_ptr_swordmaster_grappler");
 		skill.m.IsSerialized = false;
 		this.addSkill(skill);		

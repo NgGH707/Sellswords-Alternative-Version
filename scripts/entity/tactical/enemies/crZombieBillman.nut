@@ -189,16 +189,19 @@ this.crZombieBillman <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 
 		if (::Is_PTR_Exist)
 		{
-			if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
-			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);
-			}	
-			
-			this.m.Skills.addTreeOfEquippedWeapon(5);		
 			this.m.Skills.removeByID("perk.ptr_bloodlust");
 			this.m.Skills.removeByID("perk.ptr_dent_armor");
 			this.m.Skills.removeByID("perk.mastery.polearm");
 		}
+
+		if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
+		{
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		}
+		else
+		{
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
+		}	
 	}
 });
 

@@ -61,7 +61,7 @@ this.crGuardsman_pol <- this.inherit("scripts/entity/tactical/human", {
 
 			if (::Is_PTR_Exist)
 			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);
+				//this.m.Skills.addTreeOfEquippedWeapon(7);
 
 				this.m.Skills.add(this.new("scripts/skills/effects/ptr_fresh_and_furious_effect"));
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_hale_and_hearty"));
@@ -69,7 +69,7 @@ this.crGuardsman_pol <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_small_target"));
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_utilitarian"));	
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_concussive_strikes"));
-			}				
+			}	
 		}
 
 		if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getEconomicDifficulty() == this.Const.Difficulty.Legendary)
@@ -193,10 +193,11 @@ this.crGuardsman_pol <- this.inherit("scripts/entity/tactical/human", {
 			
 			if (::Is_PTR_Exist)
 			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);
+				//this.m.Skills.addTreeOfEquippedWeapon(7);
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_rattle"));
 			}
 
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_lithe"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_in_the_zone"));				
 		}
@@ -246,11 +247,12 @@ this.crGuardsman_pol <- this.inherit("scripts/entity/tactical/human", {
 
 			if (::Is_PTR_Exist)
 			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);
+				//this.m.Skills.addTreeOfEquippedWeapon(7);
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_sweeping_strikes"));
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bloody_harvest"));
 			}	
 
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 			this.m.Skills.add(this.new("scripts/skills/effects/dodge_effect"));	
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_freedom_of_movement"));

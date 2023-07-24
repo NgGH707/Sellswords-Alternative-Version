@@ -131,7 +131,8 @@
 				this.m.Items.equip(this.new("scripts/items/weapons/legend_infantry_axe"));
 			}
 		}
-		this.m.Skills.addTreeOfEquippedWeapon(4);			
+		//this.m.Skills.addTreeOfEquippedWeapon(4);
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 		
 		if (dc <= 25)
 		{

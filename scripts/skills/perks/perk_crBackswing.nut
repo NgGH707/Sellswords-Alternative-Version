@@ -24,7 +24,7 @@ this.perk_crBackswing <- this.inherit("scripts/skills/skill", {
 			actor.setActionPoints(this.Math.min(actor.getActionPointsMax(), actor.getActionPoints() + 3));
 			actor.setDirty(true);
 			local tile = actor.getTile();			
-			this.spawnIcon("perk_ptr_opportunist", tile);    //copied icon
+			if (::Is_PTR_Exist) this.spawnIcon("perk_ptr_opportunist", tile);    //copied icon
 			this.m.IsInforce = true;			
 			this.m.IsSpent = true;			
 		}

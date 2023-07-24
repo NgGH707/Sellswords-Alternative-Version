@@ -130,15 +130,20 @@ this.crBarbarianFootman <- this.inherit("scripts/entity/tactical/human", {
 			[1, "crbarbfootman_helmet"],                					
 		]));
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(4);
+		//if (::Is_PTR_Exist)
+		//{
+			//this.m.Skills.addTreeOfEquippedWeapon(4);
 
 			if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 			{
-				this.m.Skills.addTreeOfEquippedWeapon(6);								
+				//this.m.Skills.addTreeOfEquippedWeapon(6);
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);				
 			}
-		}
+			else
+			{
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);
+			}
+		//}
 				
 	}
 

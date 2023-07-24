@@ -53,12 +53,12 @@ this.crSellswordveteranranger <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_relentless"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_small_target"));		
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));			
 		
 		if (::Is_PTR_Exist)
 		{
+			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_small_target"));	
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_through_the_ranks"));	
 			this.m.Skills.addPerkTree(this.Const.Perks.LightArmorTree);		
 			this.m.Skills.addPerkTree(this.Const.Perks.RangedTree);
@@ -127,10 +127,11 @@ this.crSellswordveteranranger <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.new("scripts/items/ammo/legend_armor_piercing_bolts"));
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		
 		r = this.Math.rand(1, 4);
 

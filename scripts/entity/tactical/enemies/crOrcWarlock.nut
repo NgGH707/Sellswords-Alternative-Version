@@ -349,10 +349,11 @@ this.crOrcWarlock <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Items.equip(this.new("scripts/items/armor/guerdan_armor"));
 		}
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 	
 	function makeMiniboss()

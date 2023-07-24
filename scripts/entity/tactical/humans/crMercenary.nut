@@ -315,11 +315,12 @@ this.crMercenary <- this.inherit("scripts/entity/tactical/human", {
 			
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 
-			if (::Is_PTR_Exist)
-			{
+			//if (::Is_PTR_Exist)
+			//{
 				dc = this.Math.min(this.Math.max(4, this.Math.floor((dc - 30)/15)), 7);
-				this.m.Skills.addTreeOfEquippedWeapon(dc);	
-			}
+				//this.m.Skills.addTreeOfEquippedWeapon(dc);	
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, dc);
+			//}
 		}
 
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) == null)

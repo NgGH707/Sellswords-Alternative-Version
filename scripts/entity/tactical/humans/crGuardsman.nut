@@ -228,10 +228,11 @@ this.crGuardsman <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));			
 			this.m.Skills.add(this.new("scripts/skills/effects/dodge_effect"));	
 			
-			if (::Is_PTR_Exist)
-			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);	
-			}		
+			//if (::Is_PTR_Exist)
+			//{
+			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+			//}	
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
 		}
 		else if (rr > 6)
 		{		
@@ -319,10 +320,11 @@ this.crGuardsman <- this.inherit("scripts/entity/tactical/human", {
 
 			this.m.Items.equip(helmet);	
 			
-			if (::Is_PTR_Exist)
-			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);	
-			}
+			//if (::Is_PTR_Exist)
+			//{
+			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+			//}	
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_lithe"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_balance"));			

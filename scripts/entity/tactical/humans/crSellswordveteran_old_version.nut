@@ -160,7 +160,7 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 
 				if (::Is_PTR_Exist)
 				{
-					this.m.Skills.addTreeOfEquippedWeapon(7);
+					//this.m.Skills.addTreeOfEquippedWeapon(7);
 
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_survival_instinct"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bulwark"));
@@ -169,7 +169,9 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_unstoppable"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_pattern_recognition"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_exude_confidence"));
-				}			
+				}
+
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
 			}
             
 			if (::Is_PTR_Exist && this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) != null)
@@ -298,7 +300,7 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 
 				if (::Is_PTR_Exist)
 				{
-					this.m.Skills.addTreeOfEquippedWeapon(7);
+					//this.m.Skills.addTreeOfEquippedWeapon(7);
 					this.m.Skills.addPerkTree(this.Const.Perks.PolearmTree);
 
 					this.m.Skills.removeByID("perk_ptr_vigorous_assault");
@@ -306,7 +308,9 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_pattern_recognition"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_dismemberment"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_deep_impact"));
-				}		
+				}
+
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 			}
 
 
@@ -422,7 +426,7 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 				
 			    if (::Is_PTR_Exist)
 				{
-					this.m.Skills.addTreeOfEquippedWeapon(7);
+					//this.m.Skills.addTreeOfEquippedWeapon(7);
 				    this.m.Skills.addPerkTree(this.Const.Perks.SturdyTree);	
 					this.m.Skills.addPerkTree(this.Const.Perks.ResilientTree);
 
@@ -434,7 +438,9 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_pattern_recognition"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_personal_armor"));
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bulwark"));
-				}			
+				}
+
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 			}
 
 			r = this.Math.rand(1, 8);

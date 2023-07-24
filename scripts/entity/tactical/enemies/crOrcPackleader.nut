@@ -401,9 +401,11 @@ this.crOrcPackleader <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon();
+			//this.m.Skills.addTreeOfEquippedWeapon();
 			this.m.Skills.removeByID("perk.ptr_kata");		
 		}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 	function makeMiniboss()
@@ -427,9 +429,11 @@ this.crOrcPackleader <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon();
+			//this.m.Skills.addTreeOfEquippedWeapon();
 			this.m.Skills.removeByID("perk.ptr_kata");		
-		}	
+		}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		return true;
 	}
 

@@ -122,10 +122,11 @@ this.crAbjectgladiator <- this.inherit("scripts/entity/tactical/human", {
 		
 		this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));	
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(6);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(6);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		if (this.Math.rand(1, 100)<= 35)
 		{
@@ -243,10 +244,11 @@ this.crAbjectgladiator <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_duelist"));
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}			
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
 		return true;
 	}
 

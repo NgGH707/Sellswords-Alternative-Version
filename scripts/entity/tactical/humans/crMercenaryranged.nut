@@ -134,10 +134,11 @@ this.crMercenaryranged <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_bolts"));
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(6);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(6);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		r = this.Math.rand(1, 4);
 

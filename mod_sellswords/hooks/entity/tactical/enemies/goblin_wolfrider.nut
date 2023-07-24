@@ -54,7 +54,8 @@
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_dodge"));			
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
-		this.m.Skills.addTreeOfEquippedWeapon();		
+		//this.m.Skills.addTreeOfEquippedWeapon();
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		return true;
 	}
 }); 

@@ -66,7 +66,7 @@ this.named_sword_abt_herbstnebel <- this.inherit("scripts/items/weapons/weapon",
 		this.addSkill(this.new("scripts/skills/actives/legend_glaive_slash"));
 		this.addSkill(this.new("scripts/skills/actives/swing"));	
 		this.addSkill(this.new("scripts/skills/actives/spearwall"));
-		if (this.m.innateperk) return;			
+		if (!::Is_PTR_Exist || this.m.innateperk) return;			
 		local skill = ::new("scripts/skills/perks/perk_ptr_swordmaster_versatile_swordsman");
 		skill.m.IsSerialized = false;
 		this.addSkill(skill);		

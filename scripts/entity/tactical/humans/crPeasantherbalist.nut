@@ -154,10 +154,11 @@ this.crPeasantherbalist <- this.inherit("scripts/entity/tactical/human", {
 			}
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(4);	
-		}	
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(4);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 
 		local dc = this.World.getTime().Days;
 		if (dc <= 25)

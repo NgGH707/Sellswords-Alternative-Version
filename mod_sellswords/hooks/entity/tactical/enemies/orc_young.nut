@@ -111,7 +111,9 @@
 		{
 			this.m.Items.equip(this.new("scripts/items/shields/greenskins/orc_light_shield"));
 		}
-		this.m.Skills.addTreeOfEquippedWeapon(4);			
+
+		//if (::Is_PTR_Exist) this.m.Skills.addTreeOfEquippedWeapon(4);
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 
 		local armor;
 		armor = [

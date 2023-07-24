@@ -332,10 +332,11 @@ this.crGoblinRider01 <- this.inherit("scripts/entity/tactical/goblin", {
 			entity.getItems().clear();
 			this.m.Items.transferTo(entity.getItems());
 
-			if (::Is_PTR_Exist)
-			{
-				entity.m.Skills.addTreeOfEquippedWeapon(7);
-			}
+			//if (::Is_PTR_Exist)
+			//{
+			//	entity.m.Skills.addTreeOfEquippedWeapon(7);	
+			//}
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(entity);
 					
 			entity.setMoraleState(_info.Morale);
 			entity.setHitpoints(entity.getHitpointsMax() * 0.45);
@@ -394,10 +395,11 @@ this.crGoblinRider01 <- this.inherit("scripts/entity/tactical/goblin", {
 			this.m.Items.equip(item);
 		}
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		
 	}
 

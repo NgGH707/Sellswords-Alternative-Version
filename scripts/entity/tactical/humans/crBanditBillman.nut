@@ -179,17 +179,19 @@ this.crBanditBillman <- this.inherit("scripts/entity/tactical/human", {
 			]));
 		}
 
-		if (::Is_PTR_Exist)
-		{
+		//if (::Is_PTR_Exist)
+		//{
 			if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);
+				//this.m.Skills.addTreeOfEquippedWeapon(7);
+				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 			}	
 
-			this.m.Skills.addTreeOfEquippedWeapon(5);		
+			//this.m.Skills.addTreeOfEquippedWeapon(5);
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
 			this.m.Skills.removeByID("perk.ptr_bloodlust");
 			this.m.Skills.removeByID("perk.ptr_dent_armor");	
-		}		
+		//}		
 	}
 
 });

@@ -125,10 +125,12 @@
 			[1, "cr_enclave_armet"],               //355,-24  			
 		]));		
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon();	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon();	
+		//}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 	local ws_makeMiniboss = o.makeMiniboss;
@@ -139,11 +141,11 @@
 			return false;
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon();
-		}
-		
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon();
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		return true;
 	}
 });

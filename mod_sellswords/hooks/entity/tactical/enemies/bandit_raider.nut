@@ -133,7 +133,7 @@
 			{
 				this.m.Items.equip(this.new("scripts/items/weapons/spontoon01"));
 
-				if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
+				if (::Is_PTR_Exist && ("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 				{
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_between_the_ribs"));
 				}

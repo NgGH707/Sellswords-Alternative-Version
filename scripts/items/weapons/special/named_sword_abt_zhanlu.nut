@@ -72,7 +72,7 @@ this.named_sword_abt_zhanlu <- this.inherit("scripts/items/weapons/weapon", {
 		this.addSkill(slash);		
 		this.addSkill(riposte);
 		
-		if (this.m.innateperk) return;			
+		if (!::Is_PTR_Exist || this.m.innateperk) return;			
 		local skill = ::new("scripts/skills/perks/perk_ptr_swordmaster_blade_dancer");
 		skill.m.IsSerialized = false;
 		this.addSkill(skill);			

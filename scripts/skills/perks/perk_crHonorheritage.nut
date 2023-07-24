@@ -30,7 +30,7 @@ this.perk_crHonorheritage <- this.inherit("scripts/skills/skill", {
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(getContainer().getActor()) + "\'s increases morale due to Honor Heritage");
 		}
 
-		this.spawnIcon("perk_ptr_exude_confidence", this.getContainer().getActor().getTile());
+		if (::Is_PTR_Exist) this.spawnIcon("perk_ptr_exude_confidence", this.getContainer().getActor().getTile());
 		this.getContainer().getActor().setMoraleState(this.Math.min(4, this.getContainer().getActor().getMoraleState() + 1));		
 	}
 

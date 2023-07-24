@@ -89,7 +89,7 @@
 					row = hasRow ? this.Math.max(0, this.Math.min(row, 6)) : _row;
 					bg.addPerk(_perk, row);
 				}				
-				if (sctors)
+				if (::Is_PTR_Exist && sctors)
 				{				
 					addPerk(this.Const.Perks.PerkDefs.PTRRisingStar, 6);
 				}

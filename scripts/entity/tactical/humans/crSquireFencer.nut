@@ -125,10 +125,11 @@ this.crSquireFencer <- this.inherit("scripts/entity/tactical/human", {
 
 		this.m.Items.equip(this.new("scripts/items/weapons/fencing_sword"));
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 
 		if (this.Math.rand(1, 100) <= 33)
 		{

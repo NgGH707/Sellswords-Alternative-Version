@@ -47,7 +47,9 @@ this.cr_companion_event <- this.inherit("scripts/events/event", {
 				local bag = this.new("scripts/items/accessory/legend_pack_large");
 				bag.m.Name = _event.m.Dude.getNameOnly() + "\'s Bag";
 				_event.m.Dude.getItems().equip(bag);				
-				this.Characters.push(_event.m.Dude.getImagePath());	
+				this.Characters.push(_event.m.Dude.getImagePath());
+
+				if (!::Is_PTR_Exist) return;
 				
 				local addPerk = function ( _perk, _row = 0 )
 				{

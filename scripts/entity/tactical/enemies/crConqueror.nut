@@ -85,10 +85,11 @@ this.crConqueror <- this.inherit("scripts/entity/tactical/skeleton", {
 		]);
 		this.m.Items.equip(item);
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);	
-		}
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 });

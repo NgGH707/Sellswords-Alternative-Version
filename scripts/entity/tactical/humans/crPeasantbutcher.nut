@@ -157,10 +157,11 @@ this.crPeasantbutcher <- this.inherit("scripts/entity/tactical/human", {
 			}
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(4);	
-		}	
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(4);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 		
 		if (dc <= 25)
 		{

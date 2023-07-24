@@ -140,7 +140,8 @@
 				this.m.Items.equip(this.new("scripts/items/weapons/pike"));
 			}
 		}	
-		this.m.Skills.addTreeOfEquippedWeapon(4);			
+		//this.m.Skills.addTreeOfEquippedWeapon(4);
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);
 		
 		if (dc <= 25)
 		{

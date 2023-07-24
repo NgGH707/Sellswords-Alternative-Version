@@ -136,10 +136,12 @@ this.crDesperadoverylow <- this.inherit("scripts/entity/tactical/human", {
 
 			if (::Is_PTR_Exist)
 			{
-				this.m.Skills.addTreeOfEquippedWeapon(4);					
+				//this.m.Skills.addTreeOfEquippedWeapon(4);					
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_menacing"));
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bully"));
-			}			
+			}
+
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 		}
 
 		local armor = [

@@ -132,10 +132,11 @@ this.crAbjectfighter <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.new("scripts/items/weapons/pickaxe"));
 		}
 		
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(3);	
-		}		
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(3);	
+		//}
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 3);	
 
 		if (this.Math.rand(1, 100) <= 66)
 		{

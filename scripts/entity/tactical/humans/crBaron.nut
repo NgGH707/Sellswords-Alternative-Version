@@ -244,7 +244,7 @@ this.crBaron <- this.inherit("scripts/entity/tactical/human", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon(7);
+			//this.m.Skills.addTreeOfEquippedWeapon(7);
 			this.m.Skills.addPerkTree(this.Const.Perks.PolearmTree);
 			this.m.Skills.addPerkTree(this.Const.Perks.TwoHandedTree);
 
@@ -259,6 +259,8 @@ this.crBaron <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bloodbath"));
 			this.m.Skills.add(this.new("scripts/skills/effects/ptr_fresh_and_furious_effect"));
 		}
+
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 
 		return true;
 	}

@@ -189,10 +189,11 @@ this.crNomadScavenger <- this.inherit("scripts/entity/tactical/human", {
 			]));
 		}
 
-		if (::Is_PTR_Exist)
-		{
-			this.m.Skills.addTreeOfEquippedWeapon(6);	
-		}	
+		//if (::Is_PTR_Exist)
+		//{
+		//	this.m.Skills.addTreeOfEquippedWeapon(6);	
+		//}	
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);	
 	}
 
 });

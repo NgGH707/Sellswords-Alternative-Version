@@ -182,10 +182,11 @@ this.crHashshashinhigh <- this.inherit("scripts/entity/tactical/human", {
 
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 
-			if (::Is_PTR_Exist)
-			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);	
-			}			
+			//if (::Is_PTR_Exist)
+			//{
+			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+			//}	
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
 		}
 		
 		local armor = this.Const.World.Common.pickArmor([	

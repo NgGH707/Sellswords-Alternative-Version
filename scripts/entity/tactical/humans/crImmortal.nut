@@ -156,10 +156,11 @@ this.crImmortal <- this.inherit("scripts/entity/tactical/human", {
 			];
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 			
-			if (::Is_PTR_Exist)
-			{
-				this.m.Skills.addTreeOfEquippedWeapon(7);	
-			}		
+			//if (::Is_PTR_Exist)
+			//{
+			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
+			//}	
+			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);	
 		}
 
 		if (this.getIdealRange() == 1 && this.Math.rand(1, 100) <= 50)
@@ -250,11 +251,12 @@ this.crImmortal <- this.inherit("scripts/entity/tactical/human", {
 
 		if (::Is_PTR_Exist)
 		{
-			this.m.Skills.addTreeOfEquippedWeapon();		
+			//this.m.Skills.addTreeOfEquippedWeapon();		
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_vengeful_spite"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_man_of_steel"));
 		}
 		
+		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_devastating_strikes"));		
 		return true;
 	}
