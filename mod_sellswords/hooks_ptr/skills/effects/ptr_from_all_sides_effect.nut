@@ -37,7 +37,7 @@
 		}
 	}
 	
-	o.onTurnEnd = function()
+	o.onTurnEnd <- function()
 	{
 		this.m.Malus -= 5;
 		if (this.m.Malus <= 0)

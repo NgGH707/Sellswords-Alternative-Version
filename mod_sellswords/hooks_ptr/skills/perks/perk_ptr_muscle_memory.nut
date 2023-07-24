@@ -1,7 +1,7 @@
 ::mods_hookExactClass("skills/perks/perk_ptr_muscle_memory", function ( o )
 {
 	local ws_onAfterUpdate = o.onAfterUpdate;
-	o.onAfterUpdate(_properties)
+	o.onAfterUpdate = function(_properties)
 	{
 		local reloadBolt = this.getContainer().getSkillByID("actives.reload_bolt");
 		if (reloadBolt != null && reloadBolt.m.ActionPointCost > 0)

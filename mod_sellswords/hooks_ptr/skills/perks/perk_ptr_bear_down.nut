@@ -1,6 +1,6 @@
 ::mods_hookExactClass("skills/perks/perk_ptr_bear_down", function ( o )
 {
-	o.onBeforeDamageReceived = function( _attacker, _skill, _hitInfo, _properties )
+	o.onBeforeDamageReceived <- function( _attacker, _skill, _hitInfo, _properties )
 	{
 		if (_attacker != null && _attacker.getID() == this.getContainer().getActor().getID() || _skill == null || !_skill.isAttack() || !_skill.isUsingHitchance())
 		{

@@ -150,7 +150,7 @@
 		}		
 	}
 	
-	o.onAdded = function()
+	o.onAdded <- function()
 	{
 		this.m.TurnsLeft = 10;
 	}

@@ -11,7 +11,7 @@
 		this.m.Description = "This character\'s armor\'s weight is reducing %their% Fatigue Recovery and Flexibility, in exchange for better protection";
 	}
 	
-	o.getName = function()
+	o.getName <- function()
 	{
 		local idt = this.Math.floor(this.m.Afterwait);
 		return this.m.Name + "[color=" + this.Const.UI.Color.NegativeValue + "] (" + (this.getCrweight() * (-1)) + "[/color]" + "  [color=" + this.Const.UI.Color.PositiveValue + "]" + idt +"[/color]" + "[color=" + this.Const.UI.Color.NegativeValue + "])[/color]";

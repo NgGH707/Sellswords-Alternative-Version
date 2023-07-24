@@ -12,9 +12,4 @@
 
 		return true;
 	}
-
-	o.onUpdate = function ( _properties )
-	{
-		_properties.RangedAttackBlockedChanceMult *= 0.44;
-	}
 });	

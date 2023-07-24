@@ -88,7 +88,7 @@
 		this.m.StartingTile = this.getContainer().getActor().getTile();			
 	}
 	
-	o.onTurnEnd = function()
+	o.onTurnEnd <- function()
 	{	
 		local actor = this.getContainer().getActor();	
 		local distanceMoved = this.m.StartingTile.getDistanceTo(actor.getTile());	
@@ -106,7 +106,7 @@
 		}
 	}	
 
-	o.onCombatStarted = function()
+	o.onCombatStarted <- function()
 	{
 		this.m.ValidChance = 0;	
 		this.m.IsSpent = false;

@@ -2,11 +2,6 @@
 {
 	o.m.PercentageOfMaximumDamage = 30;
 
-	o.onUpdate = function ( _properties )
-	{
-		_properties.RangedAttackBlockedChanceMult *= 0.44;
-	}
-
 	local ws_onAnySkillUsed = o.onAnySkillUsed;
 	o.onAnySkillUsed = function( _skill, _targetEntity, _properties )
 	{
