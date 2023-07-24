@@ -1,6 +1,11 @@
 ::mods_hookExactClass("skills/effects/legend_lw_relationship_effect", function(o) {
 	o.m.Level <- 0;
 
+	o.setLevel <- function( _lv )
+	{
+		this.m.Level = _lv;
+	}
+
 	local ws_create = o.create;
 	o.create = function()
 	{
@@ -26,31 +31,31 @@
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.Level + "[/color] Melee Skill"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Level + "[/color] Melee Skill"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/ranged_skill.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.Level + "[/color] Ranged Skill"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Level + "[/color] Ranged Skill"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.Level + "[/color] Melee Defense"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Level + "[/color] Melee Defense"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/ranged_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.Level + "[/color] Ranged Defense"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Level + "[/color] Ranged Defense"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.Level + "[/color] Initiative"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Level + "[/color] Initiative"
 			},
 			{
 				id = 10,
@@ -91,12 +96,12 @@
 		if (isSupported)
 		{
 			this.m.IsHidden = false;
-			_properties.MeleeSkill += 1 * this.m.Level;
-			_properties.RangedSkill += 1 * this.m.Level;
-			_properties.MeleeDefense += 1 * this.m.Level;
-			_properties.RangedDefense += 1 * this.m.Level;
-			_properties.Initiative += 1 * this.m.Level;
-			_properties.Initiative += 1 * this.m.Level;
+			_properties.MeleeSkill += this.m.Level;
+			_properties.RangedSkill += this.m.Level;
+			_properties.MeleeDefense += this.m.Level;
+			_properties.RangedDefense += this.m.Level;
+			_properties.Initiative += this.m.Level;
+			_properties.Initiative += this.m.Level;
 			_properties.FatigueRecoveryRate += this.Math.floor(0.34 * this.m.Level);			
 		}
 		else

@@ -186,7 +186,7 @@
 			if (_skill.getID() != _id) continue;
 			
 			// make sure the changes are applied and save properly
-			_skill.hardReset();
+			_skill.hardReset(["Container"]);
 			_function.call(this, _skill);
 			_skill.saveBaseValues();
 			break;
