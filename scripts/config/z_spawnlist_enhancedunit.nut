@@ -1,16 +1,14 @@
-local gt = this.getroottable();
-
-if (!("World" in gt.Const))
+if (!("World" in ::Const))
 {
-	gt.Const.World <- {};
+	::Const.World <- {};
 }
 
-if (!("Spawn" in gt.Const.World))
+if (!("Spawn" in ::Const.World))
 {
-	gt.Const.World.Spawn <- {};
+	::Const.World.Spawn <- {};
 }
 
-gt.Const.World.Spawn.MercenariesHIGH <- {
+::Const.World.Spawn.MercenariesHIGH <- {
 	Name = "MercenariesHIGH",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,
@@ -190,7 +188,7 @@ gt.Const.World.Spawn.MercenariesHIGH <- {
 	]
 };
 
-gt.Const.World.Spawn.MercenariesLOW <- {
+::Const.World.Spawn.MercenariesLOW <- {
 	Name = "MercenariesLOW",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,
@@ -330,7 +328,7 @@ gt.Const.World.Spawn.MercenariesLOW <- {
 	]
 };
 
-gt.Const.World.Spawn.Mercenaries <- {
+::Const.World.Spawn.Mercenaries <- {
 	Name = "Mercenaries",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,
@@ -501,7 +499,7 @@ gt.Const.World.Spawn.Mercenaries <- {
 	]
 };
 
-gt.Const.World.Spawn.Nobleenhanced <- {
+::Const.World.Spawn.Nobleenhanced <- {
 	Name = "Nobleenhanced",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,
@@ -724,7 +722,7 @@ gt.Const.World.Spawn.Nobleenhanced <- {
 	]
 };
 
-gt.Const.World.Spawn.UndeadArmy <-
+::Const.World.Spawn.UndeadArmy <-
 {
 	Name = "UndeadArmy",
 	IsDynamic = true,
@@ -838,7 +836,7 @@ gt.Const.World.Spawn.UndeadArmy <-
 	]
 };
 
-gt.Const.World.Spawn.VampiresAndSkeletons <- {
+::Const.World.Spawn.VampiresAndSkeletons <- {
 	Name = "VampiresAndSkeletons",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,
@@ -929,7 +927,7 @@ gt.Const.World.Spawn.VampiresAndSkeletons <- {
 	]
 };
 
-gt.Const.World.Spawn.Vampires <-
+::Const.World.Spawn.Vampires <-
 {
 	Name = "Vampires",
 	IsDynamic = true,
@@ -969,7 +967,7 @@ gt.Const.World.Spawn.Vampires <-
 };
 
 
-gt.Const.World.Spawn.Militia <-
+::Const.World.Spawn.Militia <-
 {
 	Name = "Militia",
 	IsDynamic = true,
@@ -1115,7 +1113,7 @@ gt.Const.World.Spawn.Militia <-
 	]
 };
 
-gt.Const.World.Spawn.Caravan <-
+::Const.World.Spawn.Caravan <-
 {
 	Name = "Caravan",
 	IsDynamic = true,
@@ -1173,7 +1171,7 @@ gt.Const.World.Spawn.Caravan <-
 	]
 };
 
-gt.Const.World.Spawn.UndeadScourge <-
+::Const.World.Spawn.UndeadScourge <-
 {
 	Name = "UndeadScourge",
 	IsDynamic = true,
@@ -1396,7 +1394,7 @@ gt.Const.World.Spawn.UndeadScourge <-
 	]
 };
 
-gt.Const.World.Spawn.Southernenhanced <- {
+::Const.World.Spawn.Southernenhanced <- {
 	Name = "Southernenhanced",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,
@@ -1550,7 +1548,7 @@ gt.Const.World.Spawn.Southernenhanced <- {
 	]
 };
 
-gt.Const.World.Spawn.GreenskinHordeenhanced <- {
+::Const.World.Spawn.GreenskinHordeenhanced <- {
 	Name = "GreenskinHordeenhanced",
 	MovementSpeedMult = 1.0,
 	VisibilityMult = 1.0,
@@ -1737,7 +1735,7 @@ gt.Const.World.Spawn.GreenskinHordeenhanced <- {
 	]
 };
 
-gt.Const.World.Spawn.UndeadScourgeenhanced <- {
+::Const.World.Spawn.UndeadScourgeenhanced <- {
 	Name = "UndeadScourgeenhanced",
 	IsDynamic = true,
 	MovementSpeedMult = 0.9,
@@ -1931,7 +1929,7 @@ gt.Const.World.Spawn.UndeadScourgeenhanced <- {
 	]
 };
 
-gt.Const.World.Spawn.BarbariansArmy <- {
+::Const.World.Spawn.BarbariansArmy <- {
 	Name = "BarbariansArmy",
 	IsDynamic = true,
 	MovementSpeedMult = 1.5,
@@ -2091,7 +2089,7 @@ gt.Const.World.Spawn.BarbariansArmy <- {
 	]
 };
 
-gt.Const.World.Spawn.BarbarianswithKing <- {
+::Const.World.Spawn.BarbarianswithKing <- {
 	Name = "BarbarianswithKing",
 	IsDynamic = true,
 	MovementSpeedMult = 1.0,

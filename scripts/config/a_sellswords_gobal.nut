@@ -1,5 +1,6 @@
 local function addEntityType(_id, _name, _namePlural, _icon)
 {
+	/*
 	if (!("EntityTypeMax" in ::Const))
 	{
 		local max = 0;
@@ -9,7 +10,9 @@ local function addEntityType(_id, _name, _namePlural, _icon)
 		}
 		::Const.EntityTypeMax <- max;
 	}
-	::Const.EntityType[_id] <- ++::Const.EntityTypeMax;
+	*/
+	
+	::Const.EntityType[_id] <- ::Const.Strings.EntityName.len();
 	::Const.Strings.EntityName.push(_name);
 	::Const.Strings.EntityNamePlural.push(_namePlural);
 	::Const.EntityIcon.push(_icon);
