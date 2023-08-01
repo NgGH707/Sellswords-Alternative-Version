@@ -161,7 +161,11 @@ this.crSellswordlieutenant <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
 				[2, "sellsword_helmet_medium_high"],               //215,-9
 			]));
-			this.m.Skills.addPerkTree(this.Const.Perks.MediumArmorTree);		
+
+			if (::Is_PTR_Exist)
+			{
+				this.m.Skills.addPerkTree(this.Const.Perks.MediumArmorTree);	
+			}
 		}
 		if (this.m.Skills.hasSkill("perk.ptr_man_of_steel"))                
 		{

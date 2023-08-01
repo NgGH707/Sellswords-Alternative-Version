@@ -117,8 +117,12 @@ this.crOutlander <- this.inherit("scripts/entity/tactical/human", {
 				{	
 					b.MeleeSkill += 3;
 					b.RangedSkill += 3;			
-					b.Bravery += 2;				
-					this.m.Skills.addPerkTree(this.Const.Perks.SpearTree, 5);					
+					b.Bravery += 2;
+					if (::Is_PTR_Exist)
+					{
+						this.m.Skills.addPerkTree(this.Const.Perks.SpearTree, 5);		
+					}
+										
 					if (dc >= 90)
 					{				
 						b.MeleeSkill += 2;

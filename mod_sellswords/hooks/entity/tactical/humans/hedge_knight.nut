@@ -276,7 +276,11 @@
 			]));
 		}
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_relentless"));
-		this.m.Skills.addPerkTree(this.Const.Perks.OneHandedTree);				
+
+		if (::Is_PTR_Exist)
+		{
+			this.m.Skills.addPerkTree(this.Const.Perks.OneHandedTree);	
+		}
 		return true;
 	}	
 });

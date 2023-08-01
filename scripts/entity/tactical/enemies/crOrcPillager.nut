@@ -441,7 +441,7 @@ this.crOrcPillager <- this.inherit("scripts/entity/tactical/actor", {
 		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		local weapon = this.getMainhandItem();
-		if (weapon != null)
+		if (::Is_PTR_Exist && weapon != null)
 		{
 			if(weapon.isItemType(this.Const.Items.ItemType.TwoHanded))
 			{
