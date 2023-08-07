@@ -2,11 +2,8 @@
 	local ws_isAvailable = o.isAvailable;
 	o.isAvailable = function()
 	{
-		if (::Legends.Mod.ModSettings.getSetting("RogueMode").getValue())
-		{		
-			return;
-		}
+		if (::Legends.Mod.ModSettings.getSetting("RogueMode").getValue()) return false;
 
-		ws_isAvailable();
+		return ws_isAvailable();
 	}
 });

@@ -97,7 +97,7 @@ this.sellswords_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 	{
 		local randomVillage;
 
-		for( local i = 0; i != this.World.EntityManager.getSettlements().len(); i = i )
+		for( local i = 0; i != this.World.EntityManager.getSettlements().len(); ++i )
 		{
 			randomVillage = this.World.EntityManager.getSettlements()[i];
 
@@ -105,10 +105,6 @@ this.sellswords_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 			{
 				break;
 			}
-
-			i = ++i;
-			i = i;
-			i = i;
 		}
 
 		local randomVillageTile = randomVillage.getTile();
@@ -167,8 +163,7 @@ this.sellswords_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		{
 			if (bro.getFlags().get("IsPlayerCharacter"))
 			{
-				sellswords = ++sellswords;
-				sellswords = sellswords;
+				++sellswords;
 			}
 		}
 
@@ -181,7 +176,7 @@ this.sellswords_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 
 		foreach( i, bro in bros )
 		{
-			bro.getBaseProperties().DailyWageMult *= 1.3333;
+			bro.getBaseProperties().DailyWageMult = 1.3333;
 			bro.getSkills().update();
 		}
 	}
@@ -189,10 +184,8 @@ this.sellswords_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 	function onUpdateDraftList( _list, _gender = null )
 	{
 		_gender = ::Legends.Mod.ModSettings.getSetting("GenderEquality").getValue() != "Disabled";
-		local r;
-		r = this.Math.rand(0, 4);
 
-		if (r == 0)
+		if (this.Math.rand(0, 4) == 0)
 		{
 			_list.push("sellsword_background");
 		}
@@ -201,34 +194,39 @@ this.sellswords_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 	
 	function onBuildPerkTree( _background )
 	{
-		if (this.World.Flags.get("CrSellswordsSkill") == 1)	
+		local p;
+
+		switch(this.World.Flags.get("CrSellswordsSkill"))
 		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.BagsAndBelts);
+		case 1:
+			p = this.Const.Perks.PerkDefs.BagsAndBelts;
+			break;
+
+		case 2:
+			p = this.Const.Perks.PerkDefs.NineLives
+			break;
+			
+		case 3:
+			p = this.Const.Perks.PerkDefs.Adrenaline
+			break;
+			
+		case 4:
+			p = this.Const.Perks.PerkDefs.FastAdaption
+			break;
+			
+		case 5:
+			p = this.Const.Perks.PerkDefs.Pathfinder
+			break;
+			
+		case 6:
+			p = this.Const.Perks.PerkDefs.CripplingStrikes
+			break;
+			
+		default:
+			p = this.Const.Perks.PerkDefs.Student
 		}
-		else if (this.World.Flags.get("CrSellswordsSkill") == 2)	
-		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.NineLives);
-		}
-		else if (this.World.Flags.get("CrSellswordsSkill") == 3)	
-		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.Adrenaline);
-		}			
-		else if (this.World.Flags.get("CrSellswordsSkill") == 4)	
-		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.FastAdaption);
-		}
-		else if (this.World.Flags.get("CrSellswordsSkill") == 5)	
-		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.Pathfinder);
-		}
-		else if (this.World.Flags.get("CrSellswordsSkill") == 6)	
-		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.CripplingStrikes);
-		}
-		else
-		{
-			this.addScenarioPerk(_background, this.Const.Perks.PerkDefs.Student);
-		}			
+
+		this.addScenarioPerk(_background, p);	
 	}	
 
 });

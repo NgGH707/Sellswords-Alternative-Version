@@ -16,7 +16,7 @@
 			id = 10,
 			type = "text",
 			icon = "ui/icons/fatigue.png",
-			text = "Fatigue to Initiative Rate is decreased by [color=" + this.Const.UI.Color.PositiveValue + "]-" + this.getFatigueToInitiativeRateBonus() + "%[/color] "
+			text = "Fatigue to Initiative Rate is decreased by [color=" + this.Const.UI.Color.PositiveValue + "]-" + this.getInitiativeBonus() + "%[/color] "
 		});	
 
 		return ret;
@@ -30,6 +30,6 @@
 		}		
 
 		_properties.Initiative += this.getInitiativeBonus();
-		_properties.FatigueToInitiativeRate *= (1 - this.getFatigueToInitiativeRateBonus() * 0.01);		
+		_properties.FatigueToInitiativeRate *= (1 - this.getInitiativeBonus() * 0.01);		
 	}
 });	
