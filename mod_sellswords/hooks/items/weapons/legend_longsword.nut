@@ -16,7 +16,7 @@
 	{
 		ws_onEquip();
 
-		::Mod_Chirutiru.HookHelper.hookSpecificItemSkill.call(this, "actives.slash", function(_skill) {
+		::Mod_Sellswords.HookHelper.hookSpecificItemSkill.call(this, "actives.slash", function(_skill) {
 			_skill.m.isBunt = true;			
 			_skill.m.Name = "Bunt";		
 			_skill.m.Icon = "skills/active_bunt.png";
@@ -26,11 +26,11 @@
 			_skill.m.DirectDamageMult = this.m.DirectDamageMult;
 		});
 
-		::Mod_Chirutiru.HookHelper.hookSpecificItemSkill.call(this, "actives.overhead_strike", function(_skill) {
+		::Mod_Sellswords.HookHelper.hookSpecificItemSkill.call(this, "actives.overhead_strike", function(_skill) {
 			_skill.setStunChance(this.m.StunChance);
 		});
 
-		::Mod_Chirutiru.HookHelper.removeItemSkill.call(this, "actives.riposte");
+		::Mod_Sellswords.HookHelper.removeItemSkill.call(this, "actives.riposte");
 		this.addSkill(this.new("scripts/skills/actives/split"));
 	}
 
