@@ -31,7 +31,7 @@ this.perk_crBruiser <- this.inherit("scripts/skills/skill", {
 		local weapon = this.getContainer().getActor().getMainhandItem();
 		if (weapon != null)		
 		{
-			_properties.DamageArmorMult += 0.001 * this.Math.min(100, weapon.m.RegularDamageMax);
+			_properties.DamageArmorMult += 0.005 * this.Math.min(100, weapon.m.RegularDamageMax);
 			_properties.FatigueDealtPerHitMult += 0.03 * this.Math.min(100, weapon.m.RegularDamageMax);
 		}
 	}
