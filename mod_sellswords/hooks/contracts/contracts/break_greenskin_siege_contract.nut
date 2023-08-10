@@ -7,7 +7,7 @@
 
 		foreach (state in this.m.States)
 		{
-			if (state.ID == "Offer") continue;
+			if (state.ID != "Offer") continue;
 			
 			state.end = function()
 			{
