@@ -1,5 +1,5 @@
 ::mods_hookExactClass("skills/effects/legend_pudding_effect", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNewEatFoodEffectSystem(o);
+	::Mod_Sellswords.HookHelper.hookNewEatFoodEffectSystem(o);
 
 	o.getDescription = function()
 	{
