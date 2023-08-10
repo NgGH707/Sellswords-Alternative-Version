@@ -334,7 +334,7 @@ this.crGoblinRider04 <- this.inherit("scripts/entity/tactical/goblin", {
 			//{
 			//	entity.m.Skills.addTreeOfEquippedWeapon(7);	
 			//}
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(entity);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(entity);
 					
 			entity.setMoraleState(_info.Morale);
 			entity.setHitpoints(entity.getHitpointsMax() * 0.45);
@@ -396,7 +396,7 @@ this.crGoblinRider04 <- this.inherit("scripts/entity/tactical/goblin", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 });

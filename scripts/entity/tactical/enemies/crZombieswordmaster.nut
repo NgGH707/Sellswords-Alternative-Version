@@ -243,7 +243,7 @@ this.crZombieswordmaster <- this.inherit("scripts/entity/tactical/enemies/zombie
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 	function makeMiniboss()
@@ -274,7 +274,7 @@ this.crZombieswordmaster <- this.inherit("scripts/entity/tactical/enemies/zombie
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_primal_fear"));	
 		}
 		
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);	
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);	
 		return true;
 	}
 

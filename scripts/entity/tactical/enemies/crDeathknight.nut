@@ -184,7 +184,7 @@ this.crDeathknight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 			//{
 			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 			//}
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);		
 		}
 
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) == null)
@@ -246,7 +246,7 @@ this.crDeathknight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bully"));	
 		}
 		
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		return true;
 	}
 
