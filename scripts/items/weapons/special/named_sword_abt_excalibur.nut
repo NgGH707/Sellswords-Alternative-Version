@@ -18,7 +18,7 @@ this.named_sword_abt_excalibur <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.AddGenericSkill = true;
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
-		this.m.Value = 5000;
+		this.m.Value = 15000;
 		this.m.ShieldDamage = 16;
 		this.m.Condition = 72.0;
 		this.m.ConditionMax = 72.0;

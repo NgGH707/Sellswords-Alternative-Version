@@ -18,12 +18,12 @@ this.named_sword_abt_mystletainn <- this.inherit("scripts/items/weapons/weapon",
 		this.m.Condition = 56.0;
 		this.m.ConditionMax = 56.0;
 		this.m.StaminaModifier = -4;
-		this.m.Value = 5000;
+		this.m.Value = 15000;
 		this.m.RegularDamage = 40;
 		this.m.RegularDamageMax = 60;
 		this.m.ArmorDamageMult = 0.3;
 		this.m.DirectDamageMult = 0.25;
-		this.m.DirectDamageAdd = 0.35;	
+		this.m.DirectDamageAdd = 0.45;	
 		this.m.ChanceToHitHead = -25;		
 		this.m.IconLarge = "weapons/melee/sword_fencing_01_named_01.png";
 		this.m.Icon = "weapons/melee/sword_fencing_01_named_01_70x70.png";
@@ -37,10 +37,16 @@ this.named_sword_abt_mystletainn <- this.inherit("scripts/items/weapons/weapon",
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "Gain additional [color=" + this.Const.UI.Color.PositiveValue + "]10[/color] melee skill and [color=" + this.Const.UI.Color.PositiveValue + "]10%[/color] armor penetration"
+			text = "Gain additional [color=" + this.Const.UI.Color.PositiveValue + "]10[/color] melee skill and [color=" + this.Const.UI.Color.PositiveValue + "]20%[/color] armor penetration"
 		});		
 		result.push({
-			id = 6,
+			id = 7,
+			type = "text",
+			icon = "ui/icons/special.png",
+			text = "The efficacy of the target\'s remaining armor after an attack to reduce received Hitpoints damage is halved"
+		});
+		result.push({
+			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
 			text = "The efficacy of the target\'s remaining armor after an attack to reduce received Hitpoints damage is halved"
@@ -48,7 +54,7 @@ this.named_sword_abt_mystletainn <- this.inherit("scripts/items/weapons/weapon",
 		if (this.m.innateperk)
 		{
 			result.push({
-				id = 6,
+				id = 9,
 				type = "text",
 				icon = "ui/icons/warning.png",
 				text = "Even the most distinguished people can only master one skill"
