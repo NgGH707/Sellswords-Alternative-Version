@@ -82,7 +82,6 @@
 
 ::Const.Perks.SpecialTrees.removeSpecialPerk(::Const.Perks.PerkDefs.PTRMarksmanship);
 
-::Const.Perks.SpecialTrees.removeSpecialPerk(::Const.Perks.PerkDefs.PTRManOfSteel);
 ::Const.Perks.SpecialTrees.addSpecialPerk(15, ::Const.Perks.PerkDefs.PTRManOfSteel, 7, "Is tough as if made of steel!", function( _player, _chance ) {
 	if (!_player.getBackground().hasPerkGroup(::Const.Perks.HeavyArmorTree))
 	{
