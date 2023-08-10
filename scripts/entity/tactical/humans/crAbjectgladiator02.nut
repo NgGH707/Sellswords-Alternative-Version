@@ -93,7 +93,7 @@ this.crAbjectgladiator02 <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(6);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Offhand))
 		{	

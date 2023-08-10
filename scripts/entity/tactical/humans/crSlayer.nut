@@ -150,7 +150,7 @@ this.crSlayer <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);	
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);	
 
 		this.m.Items.equip(this.Const.World.Common.pickArmor([ 
 			[1, "crslayer_armor"],            // 300,-43			

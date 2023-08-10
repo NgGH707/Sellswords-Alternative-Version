@@ -136,7 +136,7 @@ this.crAbjectfighter <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(3);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 3);	
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 3);	
 
 		if (this.Math.rand(1, 100) <= 66)
 		{

@@ -107,7 +107,7 @@ this.crsquireLow <- this.inherit("scripts/entity/tactical/human", {
 			//{
 			//	this.m.Skills.addTreeOfEquippedWeapon(this.World.getTime().Days >= 150 ? 7 : 6);	
 			//}	
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, this.World.getTime().Days >= 150 ? 7 : 6);			
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, this.World.getTime().Days >= 150 ? 7 : 6);			
 		}
 
 		if (this.Math.rand(1, 100) <= 75)

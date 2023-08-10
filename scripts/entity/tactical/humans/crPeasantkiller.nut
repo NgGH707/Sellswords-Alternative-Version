@@ -144,7 +144,7 @@ this.crPeasantkiller <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(4);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 
 		local dc = this.World.getTime().Days;
 		local mn = this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon");	

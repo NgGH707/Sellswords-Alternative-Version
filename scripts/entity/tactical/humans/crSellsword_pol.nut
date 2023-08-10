@@ -173,7 +173,7 @@ this.crSellsword_pol <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Skills.addPerkTree(this.Const.Perks.TwoHandedTree);		
 		}
 
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 							
 		if (this.getIdealRange() == 1 && this.Math.rand(1, 100) <= 80)
 		{

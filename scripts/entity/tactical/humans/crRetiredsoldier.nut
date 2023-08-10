@@ -112,7 +112,7 @@ this.crRetiredsoldier <- this.inherit("scripts/entity/tactical/human", {
 			//{
 			//	this.m.Skills.addTreeOfEquippedWeapon(4);	
 			//}	
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);		
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 4);		
 		}
 
 		this.m.Items.equip(this.new("scripts/items/shields/heater_shield"));

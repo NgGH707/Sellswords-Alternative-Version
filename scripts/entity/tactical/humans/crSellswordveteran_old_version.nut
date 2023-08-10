@@ -171,7 +171,7 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_exude_confidence"));
 				}
 
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);		
 			}
             
 			if (::Is_PTR_Exist && this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) != null)
@@ -310,7 +310,7 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_deep_impact"));
 				}
 
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 			}
 
 
@@ -440,7 +440,7 @@ this.crSellswordveteran <- this.inherit("scripts/entity/tactical/human", {
 					this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bulwark"));
 				}
 
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 			}
 
 			r = this.Math.rand(1, 8);

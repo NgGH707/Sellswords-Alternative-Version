@@ -161,7 +161,7 @@ this.barbarian_kuangzhanshi <- this.inherit("scripts/entity/tactical/human", {
 			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 			//}
 
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		}
 		
 		this.m.Items.equip(this.Const.World.Common.pickHelmet([
@@ -204,7 +204,7 @@ this.barbarian_kuangzhanshi <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_onslaught"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));		
 		return true;

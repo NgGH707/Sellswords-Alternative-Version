@@ -140,7 +140,7 @@ this.crSquire_guest <- this.inherit("scripts/entity/tactical/player", {
 				}
 			}
 		
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 6);
 			if (this.World.getTime().Days >= 150)
 			{
 				this.m.Skills.addTreeOfEquippedWeapon(7);

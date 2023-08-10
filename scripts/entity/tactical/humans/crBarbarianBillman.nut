@@ -106,11 +106,11 @@ this.crBarbarianBillman <- this.inherit("scripts/entity/tactical/human", {
 			if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 			{
 				//this.m.Skills.addTreeOfEquippedWeapon(7);
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 			}	
 
 			//this.m.Skills.addTreeOfEquippedWeapon(5);
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 5);
 			this.m.Skills.removeByID("perk.ptr_bloodlust");
 			this.m.Skills.removeByID("perk.ptr_dent_armor");
 		//}

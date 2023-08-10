@@ -181,7 +181,7 @@ this.crDesperado <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);		
 
 		local armor = [
 			[
@@ -229,7 +229,7 @@ this.crDesperado <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_survival_instinct"));		
 		}
 
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
 		this.m.BaseProperties.DamageDirectMult *= 1.2;		
 		return true;
