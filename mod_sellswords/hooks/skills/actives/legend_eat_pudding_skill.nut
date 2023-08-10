@@ -1,5 +1,5 @@
 ::mods_hookExactClass("skills/actives/legend_eat_pudding_skill", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNewEatFoodSystem(o, false);
+	::Mod_Sellswords.HookHelper.hookNewEatFoodSystem(o, false);
 
 	o.getTooltip = function()
 	{

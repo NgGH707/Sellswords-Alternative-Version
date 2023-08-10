@@ -9,6 +9,6 @@
 		this.m.ActionPointCost = 1;
 	}
 
-	::Mod_Chirutiru.HookHelper.hookDoubleAP_CostIfEngageMelee(o);
+	::Mod_Sellswords.HookHelper.hookDoubleAP_CostIfEngageMelee(o);
 
 })
