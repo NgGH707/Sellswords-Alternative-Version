@@ -5,6 +5,6 @@
 	{
 		ws_create()
 
-		this.m.Bonus = 0.13;
+		this.m.Bonus = 0.15;
 	}
 });	
