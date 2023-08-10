@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/named_skullhammer", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		this.m.IsAgainstShields = true;
 		this.m.IsAoE = true;
 		this.m.ShieldDamage = 30;

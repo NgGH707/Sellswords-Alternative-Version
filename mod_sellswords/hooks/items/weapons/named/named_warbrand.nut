@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/named_warbrand", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		this.m.Value = 4800;
 		this.m.StaminaModifier = -8;
 		this.m.ChanceToHitHead = 0;
@@ -12,11 +12,11 @@
 	{
 		ws_onEquip();
 
-		::Mod_Chirutiru.HookHelper.hookSpecificItemSkill.call(this, "actives.split", function(_skill) {
+		::Mod_Sellswords.HookHelper.hookSpecificItemSkill.call(this, "actives.split", function(_skill) {
 			_skill.m.FatigueCost = 25;
 		});
 
-		::Mod_Chirutiru.HookHelper.hookSpecificItemSkill.call(this, "actives.swing", function(_skill) {
+		::Mod_Sellswords.HookHelper.hookSpecificItemSkill.call(this, "actives.swing", function(_skill) {
 			_skill.m.FatigueCost = 25;
 		});
 	}

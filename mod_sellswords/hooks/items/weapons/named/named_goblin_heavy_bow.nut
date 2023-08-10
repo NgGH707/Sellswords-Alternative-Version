@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/named_goblin_heavy_bow", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		this.m.Value = 3300;
 		this.m.Condition = 84.0;
 		this.m.ConditionMax = 84.0;

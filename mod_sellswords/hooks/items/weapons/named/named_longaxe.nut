@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/named_longaxe", function ( o ) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		local baseWeapon = ::new("scripts/items/weapons/crlongaxe");
 		this.m.Condition = baseWeapon.m.Condition;
 		this.m.ConditionMax = baseWeapon.m.ConditionMax;
