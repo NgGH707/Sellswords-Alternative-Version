@@ -75,7 +75,7 @@ this.cr_rogue_vanguard_background <- this.inherit("scripts/skills/backgrounds/ch
 			])
 		}
 
-		::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);
+		::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);
 										
 		local crwptrees = [
 			this.Const.Perks.AxeTree,
@@ -86,7 +86,7 @@ this.cr_rogue_vanguard_background <- this.inherit("scripts/skills/backgrounds/ch
 		];
 		for (local i = 0; i < 4; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
 		}
 		
 		local crtttrees = [
@@ -108,12 +108,12 @@ this.cr_rogue_vanguard_background <- this.inherit("scripts/skills/backgrounds/ch
 
 		for (local i = 0; i < 3; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
 		}
 
 		if (("Flags" in this.World) && this.World.Flags != null && this.World.Flags.get("RogueSpecialSkills_2") == true)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(1, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(1, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.Pathfinder,
 				]
 			);			
@@ -121,14 +121,14 @@ this.cr_rogue_vanguard_background <- this.inherit("scripts/skills/backgrounds/ch
 
 		if (!::Is_PTR_Exist) return;
 
-		::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(4, this.m.CustomPerkTree, [
+		::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(4, this.m.CustomPerkTree, [
 				this.Const.Perks.PerkDefs.BFFencer,
 			]
 		);	
 
 		if (("Flags" in this.World) && this.World.Flags != null && this.World.Flags.get("RogueSpecialSkills_1") == true)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.PTRBestialVigor,
 				]
 			);			

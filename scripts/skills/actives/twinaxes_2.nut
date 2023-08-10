@@ -1,16 +1,13 @@
-this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
-	m = {
-	used = false,
-	turncount = 0,
-	},
+this.twinaxes_2 <- this.inherit("scripts/skills/skill", {
+	m = {},
 	function create()
 	{
-		this.m.ID = "actives.zcroverwhelming";
-		this.m.Name = "Feint";
-		this.m.Description = "Use a mock blow toward one part in order to distract attention from the point one really intends to attack. Can be used every other turn.";
-		this.m.Icon = "skills/daze_square.png";
-		this.m.IconDisabled = "skills/daze_square_bw.png";
-		this.m.Overlay = "daze_square";
+		this.m.ID = "actives.twinaxes_2";
+		this.m.Name = "Swing";
+		this.m.Description = "Swinging the weapon in a wide arc that hits three adjacent tiles in counter-clockwise order. Be careful around your own men unless you want to relieve your payroll!";
+		this.m.Icon = "skills/active_06.png";
+		this.m.IconDisabled = "skills/active_06_sw.png";
+		this.m.Overlay = "active_06";
 		this.m.SoundOnUse = [
 			"sounds/combat/swing_01.wav",
 			"sounds/combat/swing_02.wav",
@@ -33,25 +30,15 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0;
-		this.m.ActionPointCost = 0;
-		this.m.FatigueCost = 10;
+		this.m.DirectDamageMult = 0.35;
+		this.m.ActionPointCost = 6;
+		this.m.FatigueCost = 30;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
-		this.m.ChanceDecapitate = 0;
-		this.m.ChanceDisembowel = 0;
+		this.m.ChanceDecapitate = 99;
+		this.m.ChanceDisembowel = 50;
 		this.m.ChanceSmash = 0;
 	}
-	
-	function isUsable()
-	{
-		if (this.m.used)
-		{
-			return false;
-		}
-
-		return true;
-	}	
 
 	function getTooltip()
 	{
@@ -60,49 +47,41 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "Can hit up to 4 targets"
+			text = "Can hit up to 3 targets"
 		});
 
-		ret.push({
-			id = 6,
-			type = "text",
-			icon = "ui/icons/hitchance.png",
-			text = "Lower targets [color=" + this.Const.UI.Color.NegativeValue + "]-" + 10 + "%[/color] Melee Skill and Ranged Skill"
-		});
+		if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInAxes)
+		{
+			ret.push({
+				id = 6,
+				type = "text",
+				icon = "ui/icons/hitchance.png",
+				text = "Has [color=" + this.Const.UI.Color.NegativeValue + "]-5%[/color] chance to hit"
+			});
+		}
 
 		return ret;
 	}
 
+	function onAfterUpdate( _properties )
+	{
+		this.m.FatigueCostMult = _properties.IsSpecializedInAxes ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
+	}
+
 	function onUse( _user, _targetTile )
 	{
-		this.m.used = true;	
 		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectSwing);
 		local ret = false;
 		local ownTile = _user.getTile();
 		local dir = ownTile.getDirectionTo(_targetTile);
-		ret = this.attackEntity(_user, _targetTile.getEntity());	
-		
-		if (!_user.isAlive() || _user.isDying())
-		{
-			return ret;
-		}
-
-		if (_targetTile.hasNextTile(dir))
-		{
-			local forwardTile = _targetTile.getNextTile(dir);
-
-			if (forwardTile.IsOccupiedByActor && forwardTile.getEntity().isAttackable() && this.Math.abs(forwardTile.Level - ownTile.Level) <= 1)
-			{
-				ret = this.attackEntity(_user, forwardTile.getEntity()) || ret;
-			}
-		}
+		ret = this.attackEntity(_user, _targetTile.getEntity());
 
 		if (!_user.isAlive() || _user.isDying())
 		{
 			return ret;
 		}
 
-		local nextDir = dir - 1 >= 0 ? dir - 1 : this.Const.Direction.COUNT - 1;			
+		local nextDir = dir - 1 >= 0 ? dir - 1 : this.Const.Direction.COUNT - 1;
 
 		if (ownTile.hasNextTile(nextDir))
 		{
@@ -119,7 +98,7 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 			return ret;
 		}
 
-		nextDir = dir + 1 <= 5 ? dir + 1 : 0;			
+		nextDir = nextDir - 1 >= 0 ? nextDir - 1 : this.Const.Direction.COUNT - 1;
 
 		if (ownTile.hasNextTile(nextDir))
 		{
@@ -131,7 +110,7 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		return ret;		
+		return ret;
 	}
 
 	function onTargetSelected( _targetTile )
@@ -139,18 +118,8 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 		local ownTile = this.m.Container.getActor().getTile();
 		local dir = ownTile.getDirectionTo(_targetTile);
 		this.Tactical.getHighlighter().addOverlayIcon(this.Const.Tactical.Settings.AreaOfEffectIcon, _targetTile, _targetTile.Pos.X, _targetTile.Pos.Y);
-		
-		if (_targetTile.hasNextTile(dir))
-		{
-			local forwardTile = _targetTile.getNextTile(dir);
+		local nextDir = dir - 1 >= 0 ? dir - 1 : this.Const.Direction.COUNT - 1;
 
-			if (this.Math.abs(forwardTile.Level - ownTile.Level) <= 1)
-			{
-				this.Tactical.getHighlighter().addOverlayIcon(this.Const.Tactical.Settings.AreaOfEffectIcon, forwardTile, forwardTile.Pos.X, forwardTile.Pos.Y);
-			}
-		}		
-
-		local nextDir = dir - 1 >= 0 ? dir - 1 : this.Const.Direction.COUNT - 1;		
 		if (ownTile.hasNextTile(nextDir))
 		{
 			local nextTile = ownTile.getNextTile(nextDir);
@@ -161,7 +130,7 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		nextDir = dir + 1 <= 5 ? dir + 1 : 0;	
+		nextDir = nextDir - 1 >= 0 ? nextDir - 1 : this.Const.Direction.COUNT - 1;
 
 		if (ownTile.hasNextTile(nextDir))
 		{
@@ -178,28 +147,12 @@ this.zcroverwhelming <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.DamageTotalMult = 0;	
+			if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInAxes)
+			{
+				_properties.MeleeSkill -= 5;
+			}
 		}
 	}
-	
-	function onTurnStart()
-	{
-		if (this.m.used)
-		{
-			this.m.turncount += 1;
-		}
-		if (this.m.turncount >= 2)
-		{
-			this.m.used = false;
-			this.m.turncount = 0;
-		}
-	}
-		
-	function onCombatFinished()
-	{
-		this.m.used = false;
-		this.m.turncount = 0;		
-	}	
 
 });
 

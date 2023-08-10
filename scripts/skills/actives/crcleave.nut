@@ -1,4 +1,4 @@
-this.pseudomince <- this.inherit("scripts/skills/skill", {
+this.crcleave <- this.inherit("scripts/skills/skill", {
 	m = {
 		SoundsA = [
 			"sounds/combat/cleave_hit_hitpoints_01.wav",
@@ -13,10 +13,10 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 	},
 	function create()
 	{
-		this.m.ID = "actives.pseudomince";
-		this.m.Name = "Mince";
-		this.m.Description = "Continuous brute force cleaving attack that can completely destroy anything alive.";
-		this.m.KilledString = "Cleaved";
+		this.m.ID = "actives.crcleave";
+		this.m.Name = "Rend Flesh";
+		this.m.Description = "A brute force cleaving attack that can inflict bleeding wounds if there is no armor absorbing the blow and if the target is able to bleed at all.";
+		this.m.KilledString = "Rent";
 		this.m.Icon = "skills/active_19.png";
 		this.m.IconDisabled = "skills/active_19_sw.png";
 		this.m.Overlay = "active_19";
@@ -36,12 +36,12 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
 		this.m.DirectDamageMult = 0.35;
-		this.m.ActionPointCost = 2;
-		this.m.FatigueCost = 5;
+		this.m.ActionPointCost = 3;
+		this.m.FatigueCost = 6;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
-		this.m.ChanceDecapitate = 75;
-		this.m.ChanceDisembowel = 75;
+		this.m.ChanceDecapitate = 50;
+		this.m.ChanceDisembowel = 33;
 		this.m.ChanceSmash = 0;
 	}
 
@@ -70,11 +70,6 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 		});
 		return ret;
 	}
-	
-	function isHidden()
-	{
-		return !this.getContainer().hasSkill("actives.barbarian_fury");
-	}	
 
 	function onAfterUpdate( _properties )
 	{
@@ -106,13 +101,9 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 					this.Sound.play(this.m.SoundsB[this.Math.rand(0, this.m.SoundsB.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
 				}
 			}
-			else if (!target.getCurrentProperties().IsImmuneToBleeding && hp - target.getHitpoints() >= this.Const.Combat.MinDamageToApplyBleeding )
+			else if (!target.getCurrentProperties().IsImmuneToBleeding && hp - target.getHitpoints() >= this.Const.Combat.MinDamageToApplyBleeding)
 			{
 				local effect = this.new("scripts/skills/effects/bleeding_effect");
-					if (_user.getFaction() == this.Const.Faction.Player )
-					{
-					effect.setActor(this.getContainer().getActor());
-					}
 				effect.setDamage(this.getContainer().getActor().getCurrentProperties().IsSpecializedInCleavers ? 10 : 5);
 				target.getSkills().add(effect);
 				this.Sound.play(this.m.SoundsA[this.Math.rand(0, this.m.SoundsA.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
@@ -130,7 +121,7 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.DamageTotalMult *= 0.5;
+			_properties.DamageTotalMult *= 0.66666667;			
 		}
 	}	
 

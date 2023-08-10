@@ -75,7 +75,7 @@ this.cr_rogue_defender_background <- this.inherit("scripts/skills/backgrounds/ch
 			])
 		}
 
-		::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);
+		::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);
 
 		local cramtrees = [
 			this.Const.Perks.LightArmorTree,
@@ -84,7 +84,7 @@ this.cr_rogue_defender_background <- this.inherit("scripts/skills/backgrounds/ch
 		];
 		for (local i = 0; i < 2; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [cramtrees.remove(this.Math.rand(0, cramtrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [cramtrees.remove(this.Math.rand(0, cramtrees.len()-1))]);			
 		}		
 										
 		local crwptrees = [
@@ -98,7 +98,7 @@ this.cr_rogue_defender_background <- this.inherit("scripts/skills/backgrounds/ch
 
 		for (local i = 0; i < 2; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
 		}
 		
 		local crtttrees = [	
@@ -122,19 +122,19 @@ this.cr_rogue_defender_background <- this.inherit("scripts/skills/backgrounds/ch
 
 		for (local i = 0; i < 2; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
 		}
 
 		if (("Flags" in this.World) && this.World.Flags != null && this.World.Flags.get("RogueSpecialSkills_1") == true)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.LegendBattleheart,
 				]
 			);			
 		}	
 		if (("Flags" in this.World) && this.World.Flags != null && this.World.Flags.get("RogueSpecialSkills_2") == true)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(1, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(1, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.crresilient,
 				]
 			);			
@@ -142,11 +142,11 @@ this.cr_rogue_defender_background <- this.inherit("scripts/skills/backgrounds/ch
 
 		if (::Is_PTR_Exist)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(5, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(5, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.PTRPersonalArmor,
 				]
 			);		
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(6, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(6, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.PTRManOfSteel,
 				]
 			);

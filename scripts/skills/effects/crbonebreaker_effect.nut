@@ -6,7 +6,7 @@ this.crbonebreaker_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.crbonebreaker";
-		this.m.Name = "Fracture";
+		this.m.Name = "Fractured";
 		this.m.Icon = "ui/perks/ptr_bone_breaker.png";
 		this.m.IconMini = "crBonebreaker_mini";
 		this.m.Overlay = "crBonebreaker_mini";

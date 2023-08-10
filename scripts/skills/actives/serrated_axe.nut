@@ -1,4 +1,4 @@
-this.pseudomince <- this.inherit("scripts/skills/skill", {
+this.serrated_axe <- this.inherit("scripts/skills/skill", {
 	m = {
 		SoundsA = [
 			"sounds/combat/cleave_hit_hitpoints_01.wav",
@@ -13,17 +13,22 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 	},
 	function create()
 	{
-		this.m.ID = "actives.pseudomince";
-		this.m.Name = "Mince";
-		this.m.Description = "Continuous brute force cleaving attack that can completely destroy anything alive.";
-		this.m.KilledString = "Cleaved";
-		this.m.Icon = "skills/active_19.png";
-		this.m.IconDisabled = "skills/active_19_sw.png";
-		this.m.Overlay = "active_19";
+		this.m.ID = "actives.serrated_axe";
+		this.m.Name = "Execute";
+		this.m.Description = "Use the serrated teeth to slash at an enemy mercilessly, leaving the victim bleeding profusely. Bleed damage is affected by Cleaver Mastery.";
+		this.m.KilledString = "Ripped to shreds";
+		this.m.Icon = "skills/active_37.png";
+		this.m.IconDisabled = "skills/active_37_sw.png";
+		this.m.Overlay = "active_37";
 		this.m.SoundOnUse = [
-			"sounds/combat/cleave_01.wav",
-			"sounds/combat/cleave_02.wav",
-			"sounds/combat/cleave_03.wav"
+			"sounds/combat/overhead_strike_01.wav",
+			"sounds/combat/overhead_strike_02.wav",
+			"sounds/combat/overhead_strike_03.wav"
+		];
+		this.m.SoundOnHit = [
+			"sounds/combat/overhead_strike_hit_01.wav",
+			"sounds/combat/overhead_strike_hit_02.wav",
+			"sounds/combat/overhead_strike_hit_03.wav"
 		];
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
@@ -32,17 +37,38 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargeted = true;
 		this.m.IsStacking = false;
 		this.m.IsAttack = true;
+		this.m.IsIgnoredAsAOO = false;
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.35;
-		this.m.ActionPointCost = 2;
-		this.m.FatigueCost = 5;
+		this.m.DirectDamageMult = 0.4;
+		this.m.ActionPointCost = 4;
+		this.m.FatigueCost = 15;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
-		this.m.ChanceDecapitate = 75;
-		this.m.ChanceDisembowel = 75;
+		this.m.ChanceDecapitate = 50;
+		this.m.ChanceDisembowel = 50;
 		this.m.ChanceSmash = 0;
+	}
+
+	function getTooltip()
+	{
+		local ret = this.getDefaultTooltip();
+		local ret = this.getDefaultTooltip();
+		local dmg = this.getContainer().getActor().getCurrentProperties().IsSpecializedInCleavers ? 10 : 5;
+		ret.push({
+			id = 8,
+			type = "text",
+			icon = "ui/icons/special.png",
+			text = "Inflicts additional stacking [color=" + this.Const.UI.Color.DamageValue + "]" + dmg + "[/color] bleeding damage per turn, for 2 turns"
+		});
+		ret.push({
+			id = 7,
+			type = "text",
+			icon = "ui/icons/special.png",
+			text = "Deal [color=" + this.Const.UI.Color.DamageValue + "]15%[/color] more damage per stack against bleeding targets."
+		});		
+		return ret;
 	}
 
 	function addResources()
@@ -58,27 +84,9 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
-	function getTooltip()
-	{
-		local ret = this.getDefaultTooltip();
-		local dmg = this.getContainer().getActor().getCurrentProperties().IsSpecializedInCleavers ? 10 : 5;
-		ret.push({
-			id = 8,
-			type = "text",
-			icon = "ui/icons/special.png",
-			text = "Inflicts additional stacking [color=" + this.Const.UI.Color.DamageValue + "]" + dmg + "[/color] bleeding damage per turn, for 2 turns"
-		});
-		return ret;
-	}
-	
-	function isHidden()
-	{
-		return !this.getContainer().hasSkill("actives.barbarian_fury");
-	}	
-
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInCleavers ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
+		this.m.FatigueCostMult = _properties.IsSpecializedInAxes ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -106,14 +114,10 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 					this.Sound.play(this.m.SoundsB[this.Math.rand(0, this.m.SoundsB.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
 				}
 			}
-			else if (!target.getCurrentProperties().IsImmuneToBleeding && hp - target.getHitpoints() >= this.Const.Combat.MinDamageToApplyBleeding )
+			else if (!target.getCurrentProperties().IsImmuneToBleeding && hp - target.getHitpoints() >= this.Const.Combat.MinDamageToApplyBleeding)
 			{
 				local effect = this.new("scripts/skills/effects/bleeding_effect");
-					if (_user.getFaction() == this.Const.Faction.Player )
-					{
-					effect.setActor(this.getContainer().getActor());
-					}
-				effect.setDamage(this.getContainer().getActor().getCurrentProperties().IsSpecializedInCleavers ? 10 : 5);
+				effect.setDamage(this.getContainer().getActor().getCurrentProperties().IsSpecializedInAxes ? 10 : 5);
 				target.getSkills().add(effect);
 				this.Sound.play(this.m.SoundsA[this.Math.rand(0, this.m.SoundsA.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
 			}
@@ -125,14 +129,21 @@ this.pseudomince <- this.inherit("scripts/skills/skill", {
 
 		return success;
 	}
-	
+
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
-	{
+	{		
+		if (_targetEntity == null)
+		{
+			return;
+		}
+		
+		local bleedCount = _targetEntity.getSkills().getAllSkillsByID("effects.bleeding").len();	
+
 		if (_skill == this)
 		{
-			_properties.DamageTotalMult *= 0.5;
-		}
-	}	
+			_properties.DamageTotalMult *= this.Math.minf(1 + 0.15 * bleedCount, 2.5);
+		}		
+	}
 
 });
 

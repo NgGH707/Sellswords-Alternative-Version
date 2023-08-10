@@ -77,7 +77,7 @@ this.cr_rogue_sniper_background <- this.inherit("scripts/skills/backgrounds/char
 			])
 		}
 
-		::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);		
+		::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);		
 		
 		local crwptrees = [
 			this.Const.Perks.AxeTree,
@@ -92,7 +92,7 @@ this.cr_rogue_sniper_background <- this.inherit("scripts/skills/backgrounds/char
 		];
 		for (local i = 0; i < 1; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
 		}
 		
 		local crtttrees = [	
@@ -114,12 +114,12 @@ this.cr_rogue_sniper_background <- this.inherit("scripts/skills/backgrounds/char
 
 		for (local i = 0; i < 3; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
 		}	
 
 		if (("Flags" in this.World) && this.World.Flags != null && this.World.Flags.get("RogueSpecialSkills_1") == true)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(5, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(5, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.LegendWindReader,
 				]
 			);			
@@ -127,7 +127,7 @@ this.cr_rogue_sniper_background <- this.inherit("scripts/skills/backgrounds/char
 
 		if (("Flags" in this.World) && this.World.Flags != null && this.World.Flags.get("RogueSpecialSkills_2") == true)
 		{
-			::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(1, this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(1, this.m.CustomPerkTree, [
 					this.Const.Perks.PerkDefs.Bullseye,
 				]
 			);			
