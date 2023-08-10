@@ -10,7 +10,7 @@
 
 	o.getDescription <- function()
 	{
-		return "Put your full weight into defending every blow and gain [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] of the combined fatigue modifier from body, head, main hand and off hand as Damage output bonus.\n• You will also have the weak steadfast effect if the combined fatigue modifier from body, head and off hand is above 50.\n• Besides, the weak steadfast effect upgrades to steadfast if it is above 65. \n• Additionally, you will grant immue to stun if it is above 80.";
+		return "Put your full weight into defending every blow and gain [color=" + ::Const.UI.Color.PositiveValue + "]+10%[/color] of the combined Fatigue modifier from body, head, main hand and off hand as additional Damage.\n• You will gain a weakened \'Steadfast\' effect if the combined Fatigue modifier from body, head and off hand is [color=" + ::Const.UI.Color.PositiveValue + "]50[/color] or more.\n• This effect upgrades to the standard \'Steadfast\' once combined Fatigue is at [color=" + ::Const.UI.Color.PositiveValue + "]65[/color] or more.\n• Grants an additional immunity to being Stunned once the combined Fatigue modifier is at [color=" + ::Const.UI.Color.PositiveValue + "]80[/color] or more, this stacks with the \'Steadfast\' effect.";
 	}		
 
 	o.getTooltip <- function()
@@ -58,7 +58,7 @@
 			id = 10,
 			type = "text",
 			icon = "ui/icons/fatigue.png",
-			text = "Current effective armor wight is [color=" + this.Const.UI.Color.PositiveValue + "]" + crfat + "[/color] ."			
+			text = "Current effective armour weight is [color=" + this.Const.UI.Color.PositiveValue + "]" + crfat + "[/color] ."			
 		});		
 		return tooltip;
 	}
@@ -107,8 +107,8 @@
 		
 		if (crfat >= 65)
 		{
-			_properties.FatigueReceivedPerHitMult *= 0.3;
-			_properties.FatigueLossOnBeingMissedMult *= 0.3;			
+			_properties.FatigueReceivedPerHitMult *= 0.1;
+			_properties.FatigueLossOnBeingMissedMult *= 0.1;			
 		}
 
 		if (crfat >= 80)

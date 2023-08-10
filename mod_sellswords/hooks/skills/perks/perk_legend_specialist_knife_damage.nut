@@ -3,7 +3,7 @@
 	o.onUpdate = function ( _properties )
 	{
 		local dc = this.World.getTime().Days;
-		dc = this.Math.floor(dc/25);
+		dc = this.Math.floor(dc/7);
 		dc = 0.01 * this.Math.min(5 * dc + 35, 100);				
 		local item = this.getContainer().getActor().getMainhandItem();
 		if (item != null)
