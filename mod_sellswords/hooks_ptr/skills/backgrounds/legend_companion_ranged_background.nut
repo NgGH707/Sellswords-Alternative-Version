@@ -5,8 +5,8 @@
 	{
 		ws_create();
 		
-		this.m.CustomPerkTree = ::Mod_Chirutiru.HookHelper.clearCustomPerkTree(this.m.CustomPerkTree);
-		::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+		this.m.CustomPerkTree = ::Mod_Sellswords.HookHelper.clearCustomPerkTree(this.m.CustomPerkTree);
+		::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 			this.Const.Perks.LightArmorTree,
 			this.Const.Perks.UnstoppableTree,
 			this.Const.Perks.OneHandedTree,
@@ -15,7 +15,7 @@
 
 		if (this.Math.rand(0, 100) <= 33)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 				this.Const.Perks.MediumArmorTree
 			]);
 		}
@@ -29,7 +29,7 @@
 
 		for( local i = 0; i < 2; i = ++i )
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 				crwptrees.remove(this.Math.rand(0, crwptrees.len() - 1))
 			]);
 		}
@@ -45,7 +45,7 @@
 
 		for( local i = 0; i < 2; i = ++i )
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 				crwptrees.remove(this.Math.rand(0, crwptrees.len() - 1))
 			]);
 		}
@@ -60,7 +60,7 @@
 
 		for( local i = 0; i < 3; i = ++i )
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 				crtttrees.remove(this.Math.rand(0, crtttrees.len() - 1))
 			]);
 		}
@@ -84,7 +84,7 @@
 
 		for( local i = 0; i < 1; i = ++i )
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 				crfetrees.remove(this.Math.rand(0, crfetrees.len() - 1))
 			]);
 		}
@@ -95,43 +95,43 @@
 
 			if (pr <= 30)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.TrapperClassTree
 				]);
 			}
 			else if (pr <= 50)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.TacticianClassTree
 				]);
 			}
 			else if (pr <= 60)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.HealerClassTree
 				]);
 			}
 			else if (pr <= 70)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.ChefClassTree
 				]);
 			}
 			else if (pr <= 80)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.MenderClassTree
 				]);
 			}
 			else if (pr <= 90)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.HoundmasterClassTree
 				]);
 			}
 			else if (pr <= 100)
 			{
-				::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
+				::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [
 					this.Const.Perks.ClerkClassTree
 				]);
 			}
