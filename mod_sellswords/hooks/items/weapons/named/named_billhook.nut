@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/named_billhook", function ( o ) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		local baseWeapon = this.new("scripts/items/weapons/billhook");
 		this.m.Condition = baseWeapon.m.Condition;
 		this.m.ConditionMax = baseWeapon.m.ConditionMax;

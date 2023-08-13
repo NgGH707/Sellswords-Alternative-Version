@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/legend_named_halberd", function ( o ) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		local baseWeapon = ::new("scripts/items/weapons/legend_halberd");
 		this.m.Condition = baseWeapon.m.Condition;
 		this.m.ConditionMax = baseWeapon.m.ConditionMax;

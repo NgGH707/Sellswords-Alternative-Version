@@ -1,5 +1,5 @@
 ::mods_hookExactClass("items/weapons/named/named_longsword", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNamedItemToChangeStats(o, function() {
+	::Mod_Sellswords.HookHelper.hookNamedItemToChangeStats(o, function() {
 		this.m.Description = "This blade shows great craftmanship. It is certainly brutally efficient in cutting, but the simple design has also a subtlety that is easily overlooked.";
 		this.m.IsAgainstShields = false;
 		this.m.Value = 3600;
@@ -14,11 +14,11 @@
 	{
 		ws_onEquip();
 
-		::Mod_Chirutiru.HookHelper.hookSpecificItemSkill.call(this, "actives.overhead_strike", function(_skill) {
+		::Mod_Sellswords.HookHelper.hookSpecificItemSkill.call(this, "actives.overhead_strike", function(_skill) {
 			_skill.setStunChance(this.m.StunChance);
 		});
 
-		::Mod_Chirutiru.HookHelper.hookSpecificItemSkill.call(this, "actives.slash", function(_skill) {
+		::Mod_Sellswords.HookHelper.hookSpecificItemSkill.call(this, "actives.slash", function(_skill) {
 			_skill.m.isBunt = true;			
 			_skill.m.Name = "Bunt";		
 			_skill.m.Icon = "skills/active_bunt.png";
@@ -28,8 +28,8 @@
 			_skill.m.DirectDamageMult = this.m.DirectDamageMult;	
 		});
 
-		::Mod_Chirutiru.HookHelper.removeItemSkill.call(this, "actives.swing");
-		::Mod_Chirutiru.HookHelper.removeItemSkill.call(this, "actives.split_shield");
+		::Mod_Sellswords.HookHelper.removeItemSkill.call(this, "actives.swing");
+		::Mod_Sellswords.HookHelper.removeItemSkill.call(this, "actives.split_shield");
 
 		this.addSkill(this.new("scripts/skills/actives/split"));
 	}
