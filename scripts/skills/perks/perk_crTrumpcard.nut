@@ -6,7 +6,7 @@ this.perk_crTrumpcard <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "perk.crTrumpcard";
 		this.m.Name = this.Const.Strings.PerkName.crTrumpcard;
-		this.m.Description = "This character is quick to understand the fighting style of %their% opponents, getting better at fighting them as the combat draws on.";
+		this.m.Description = this.Const.Strings.PerkDescription.crTrumpcard;
 		this.m.Icon = "skills/status_effect_06.png";
 		this.m.IconMini = "status_effect_06_mini";
 		this.m.Type = this.Const.SkillType.Perk | this.Const.SkillType.StatusEffect;
