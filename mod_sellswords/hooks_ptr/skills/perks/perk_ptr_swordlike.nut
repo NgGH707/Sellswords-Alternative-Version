@@ -23,7 +23,7 @@
 		{
 			return;
 		}	
-		if (_skill.getID() == "actives.cleave" || _skill.getID() == "actives.kuangzhanshishuangkandao01_01" || _skill.getID() == "actives.legend_voulge_cleave")
+		if (_skill.getID() == "actives.cleave" || _skill.getID() == "actives.twincleavers_1" || _skill.getID() == "actives.legend_voulge_cleave")
 		{
 			_properties.MeleeSkill += this.m.Bonus;
 		}
@@ -34,7 +34,7 @@
 	};
 	o.onQueryTooltip = function ( _skill, _tooltip )
 	{
-		if (this.isEnabled() && (_skill.getID() == "actives.cleave" || _skill.getID() == "actives.kuangzhanshishuangkandao01_01" || _skill.getID() == "actives.legend_voulge_cleave"))
+		if (this.isEnabled() && (_skill.getID() == "actives.cleave" || _skill.getID() == "actives.twincleavers_1" || _skill.getID() == "actives.legend_voulge_cleave"))
 		{
 			_tooltip.push({
 				id = 10,

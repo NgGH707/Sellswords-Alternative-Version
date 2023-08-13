@@ -2,7 +2,7 @@
 {
 	o.getDescription <- function()
 	{
-		return "\'Not much to be afraid of behind a suit of plate!\'\n\n[color=" + this.Const.UI.Color.Passive + "][u]Passive:[/u][/color]\n• Resolve is increased by [color=" + this.Const.UI.Color.PositiveValue + "]2%[/color] of the combined current durability of head and body armor.\n• This bonus is [color=" + this.Const.UI.Color.PositiveValue + "]doubled[/color] against negative morale checks except mental attacks.\n• Besides hitpionts is increase by the same bouns percentage of the combined maximum durability of head and body armor. ";
+		return "\'Not much to be afraid of behind a suit of plate!\'\n\n[color=" + this.Const.UI.Color.Passive + "][u]Passive:[/u][/color]\n• Resolve is increased by [color=" + this.Const.UI.Color.PositiveValue + "]2%[/color] of the combined current durability of head and body armor.\n• This bonus is [color=" + this.Const.UI.Color.PositiveValue + "]doubled[/color] against negative morale checks except mental attacks.\n• Hitpionts are increase by [color=" + this.Const.UI.Color.PositiveValue + "]2%[/color] of the combined maximum durability of head and body armor";
 	}
 
 	o.getTooltip = function()
