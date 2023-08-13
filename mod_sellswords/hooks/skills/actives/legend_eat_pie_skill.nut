@@ -1,5 +1,5 @@
 ::mods_hookExactClass("skills/actives/legend_eat_pie_skill", function(o) {
-	::Mod_Chirutiru.HookHelper.hookNewEatFoodSystem(o, false);
+	::Mod_Sellswords.HookHelper.hookNewEatFoodSystem(o, false);
 
 	local ws_create = o.create;
 	o.create = function()

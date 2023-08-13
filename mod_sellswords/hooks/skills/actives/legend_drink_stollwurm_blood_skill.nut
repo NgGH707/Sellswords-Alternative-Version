@@ -8,7 +8,7 @@
 		this.m.Description = "Give to an adjacent ally or drink yourself a flask of stollwurm blood that damaging adjacent attackers whenever they deal hitpoint damage or receive hitpoint damage for three turns. AP cost is doubled while engaged in melee, and anyone receiving the item needs to have a free bag slot.";	
 	}
 
-	::Mod_Chirutiru.HookHelper.hookDoubleAP_CostIfEngageMelee(o);
+	::Mod_Sellswords.HookHelper.hookDoubleAP_CostIfEngageMelee(o);
 
 	local ws_getTooltip = o.getTooltip;
 	o.getTooltip = function()

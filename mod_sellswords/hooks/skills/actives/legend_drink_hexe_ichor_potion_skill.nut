@@ -8,7 +8,7 @@
 		this.m.Description = "Give to an adjacent ally or drink yourself a dubious hexen brew, grants someone perfect focus, halving the action point costs of all skills for three turns. AP cost is doubled while engaged in melee, and anyone receiving the item needs to have a free bag slot.";
 	}
 
-	::Mod_Chirutiru.HookHelper.hookDoubleAP_CostIfEngageMelee(o, false);
+	::Mod_Sellswords.HookHelper.hookDoubleAP_CostIfEngageMelee(o, false);
 
 	o.getTooltip = function()
 	{
