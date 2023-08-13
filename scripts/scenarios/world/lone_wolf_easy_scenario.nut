@@ -3,8 +3,8 @@ this.lone_wolf_easy_scenario <- this.inherit("scripts/scenarios/world/starting_s
 	function create()
 	{
 		this.m.ID = "scenario.lone_wolf_easy";
-		this.m.Name = "Lone wolf, not alone anymore";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_35.png[/img][/p][p]You have been traveling for a long time, taking part in tourneys and sparring with young nobles. A hedge knight as tall as a tree, you never needed anybody for long. Is it true still?\n\n[color=#bcad8c]Lone Wolf:[/color] Start with a single experienced hedge knight and great equipment but low funds.\n[color=#bcad8c]Elite Few:[/color] Only hire top talents, everyone begins with Personal Armor.\n[color=#bcad8c]Avatar:[/color] If your lone wolf dies, the campaign ends.\n[color=#bcad8c]of the Same Mind:[/color] Encounter other champions through events to join your cause.[/p]";
+		this.m.Name = "Not So Lone Wolf";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_35.png[/img][/p][p]You have been traveling for a long time, taking part in tourneys and sparring with young nobles. A hedge knight as tall as a tree, you never needed anybody for long. Is it true still?\n\n[color=#bcad8c]Lone Wolf:[/color] Start with a single experienced hedge knight and great equipment but low funds.\n[color=#bcad8c]Elite Few:[/color] Only hire top talents, if PTR is used, everyone begins with Personal Armor.\n[color=#bcad8c]Avatar:[/color] If your lone wolf dies, the campaign ends.\n[color=#bcad8c]of the Same Mind:[/color] Encounter other champions through events to join your cause.[/p]";
 		this.m.Difficulty = 1;
 		this.m.Order = 151;
 		this.m.IsFixedLook = true;
@@ -35,7 +35,7 @@ this.lone_wolf_easy_scenario <- this.inherit("scripts/scenarios/world/starting_s
 		bros[0].m.PerkPoints = 3;
 		bros[0].m.LevelUps = 3;
 		bros[0].m.Level = 4;
-		bros[0].setVeteranPerks(2);
+		bros[0].setVeteranPerks(1);
 		bros[0].m.Talents = [];
 		bros[0].m.Attributes = [];
 		local talents = bros[0].getTalents();
