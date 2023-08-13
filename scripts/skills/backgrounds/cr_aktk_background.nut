@@ -84,7 +84,7 @@ this.cr_aktk_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			])
 		}
 
-		::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);		
+		::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, trees);		
 										
 		local crwptrees = [
 			this.Const.Perks.AxeTree,
@@ -97,7 +97,7 @@ this.cr_aktk_background <- this.inherit("scripts/skills/backgrounds/character_ba
 
 		for (local i = 0; i < 3; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crwptrees.remove(this.Math.rand(0, crwptrees.len()-1))]);			
 		}
 		
 		local crtttrees = [
@@ -114,7 +114,7 @@ this.cr_aktk_background <- this.inherit("scripts/skills/backgrounds/character_ba
 
 		for (local i = 0; i < 3; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crtttrees.remove(this.Math.rand(0, crtttrees.len()-1))]);			
 		}
 		
 		local crfetrees = [
@@ -138,7 +138,7 @@ this.cr_aktk_background <- this.inherit("scripts/skills/backgrounds/character_ba
 
 		for (local i = 0; i < 1; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crfetrees.remove(this.Math.rand(0, crfetrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crfetrees.remove(this.Math.rand(0, crfetrees.len()-1))]);			
 		}
 
 		if (!::Is_PTR_Exist) return
@@ -170,10 +170,10 @@ this.cr_aktk_background <- this.inherit("scripts/skills/backgrounds/character_ba
 
 		for (local i = 0; i < 1; ++i)
 		{
-			::Mod_Chirutiru.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crfetrees.remove(this.Math.rand(0, crfetrees.len()-1))]);			
+			::Mod_Sellswords.HookHelper.addPerkTreesToCustomPerkTree(this.m.CustomPerkTree, [crfetrees.remove(this.Math.rand(0, crfetrees.len()-1))]);			
 		}
 
-		::Mod_Chirutiru.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
+		::Mod_Sellswords.HookHelper.addPerksToCustomPerkTree(7, this.m.CustomPerkTree, [
 				this.Const.Perks.PerkDefs.BFFencer,
 			]
 		);		
