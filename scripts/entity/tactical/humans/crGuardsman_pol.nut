@@ -197,7 +197,7 @@ this.crGuardsman_pol <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_rattle"));
 			}
 
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_lithe"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_in_the_zone"));				
 		}
@@ -252,7 +252,7 @@ this.crGuardsman_pol <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bloody_harvest"));
 			}	
 
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 			this.m.Skills.add(this.new("scripts/skills/effects/dodge_effect"));	
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_freedom_of_movement"));

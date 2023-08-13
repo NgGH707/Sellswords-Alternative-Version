@@ -95,7 +95,7 @@ this.crBillman_guest <- this.inherit("scripts/entity/tactical/player", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 
 		if (dc <= 50)
 		{

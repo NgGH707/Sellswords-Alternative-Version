@@ -121,7 +121,7 @@ this.crHashshashinLOW <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(5);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 5);
 
 		this.m.Items.equip(this.Const.World.Common.pickArmor([
 			[3, "hashshashin_armor_low"], 		

@@ -100,7 +100,7 @@ this.crManhunter <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(6);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		this.m.Items.equip(this.new("scripts/items/tools/throwing_net"));
 		local armor = [

@@ -163,7 +163,7 @@ this.crBaron02 <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Skills.add(this.new("scripts/skills/effects/ptr_fresh_and_furious_effect"));
 		}
 
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 

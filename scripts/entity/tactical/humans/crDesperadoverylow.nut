@@ -141,7 +141,7 @@ this.crDesperadoverylow <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(this.new("scripts/skills/perks/perk_ptr_bully"));
 			}
 
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);	
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 4);	
 		}
 
 		local armor = [

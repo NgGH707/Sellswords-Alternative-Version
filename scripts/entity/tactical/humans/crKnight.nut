@@ -191,7 +191,7 @@ this.crKnight <- this.inherit("scripts/entity/tactical/human", {
 			//{
 			//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 			//}	
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		}
 
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Offhand))
@@ -367,7 +367,7 @@ this.crKnight <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_killing_frenzy"));
 		return true;

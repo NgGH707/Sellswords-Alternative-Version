@@ -172,7 +172,7 @@ this.crBarbarianKing <- this.inherit("scripts/entity/tactical/human", {
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}
 
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 
 		local dc = this.World.getTime().Days;
 		local mn = this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon");	
@@ -218,10 +218,11 @@ this.crBarbarianKing <- this.inherit("scripts/entity/tactical/human", {
 
 		this.getSprite("miniboss").setBrush("bust_miniboss");
 		local weapons = [
-			"weapons/named/named_canpodajian",
-			"weapons/named/named_canpodajian2",
-			"weapons/named/named_fangxuezhe",
-			"weapons/named/named_skullhammer",
+			"weapons/named/named_broken_sword",
+			"weapons/named/named_broken_cleaver",
+			"weapons/named/named_broken_axe",
+			"weapons/named/named_twinaxes",
+			"weapons/named/named_twincleavers",
 			"weapons/named/named_two_handed_spiked_mace",
 			"weapons/named/named_rusty_warblade",
 			"weapons/named/named_heavy_rusty_axe",
@@ -266,7 +267,7 @@ this.crBarbarianKing <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_alert"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_last_stand"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));		

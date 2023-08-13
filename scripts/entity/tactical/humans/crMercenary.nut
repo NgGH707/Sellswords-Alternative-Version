@@ -319,7 +319,7 @@ this.crMercenary <- this.inherit("scripts/entity/tactical/human", {
 			//{
 				dc = this.Math.min(this.Math.max(4, this.Math.floor((dc - 30)/15)), 7);
 				//this.m.Skills.addTreeOfEquippedWeapon(dc);	
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, dc);
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, dc);
 			//}
 		}
 

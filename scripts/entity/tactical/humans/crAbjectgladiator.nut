@@ -126,7 +126,7 @@ this.crAbjectgladiator <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(6);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 6);
 
 		if (this.Math.rand(1, 100)<= 35)
 		{
@@ -248,7 +248,7 @@ this.crAbjectgladiator <- this.inherit("scripts/entity/tactical/human", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);		
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);		
 		return true;
 	}
 

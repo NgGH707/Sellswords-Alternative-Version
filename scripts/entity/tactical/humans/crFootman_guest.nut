@@ -119,7 +119,7 @@ this.crFootman_guest <- this.inherit("scripts/entity/tactical/player", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(4);	
 		//}	
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 4);
 
 		r = this.Math.rand(1, 2);
 		local shield;
