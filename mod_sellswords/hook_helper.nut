@@ -1,4 +1,4 @@
-::Mod_Chirutiru.HookHelper <- 
+::Mod_Sellswords.HookHelper <- 
 {
 	hookDoubleAP_CostIfEngageMelee = function( _object , _withTooltip = true )
 	{
@@ -319,7 +319,7 @@
 		return _customPerkTree;
 	}
 
-	// ::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 7);
+	// ::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 7);
 	addTreeOfEquippedWeapon = function( _actor, _maxTier = 7 )
 	{
 		local weapon = _actor.getMainhandItem();
