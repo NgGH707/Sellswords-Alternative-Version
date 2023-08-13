@@ -409,7 +409,7 @@ this.crOrcGrunt <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Skills.removeByID("perk.ptr_kata");	
 		}
 
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 5);
 	}
 	
 	function makeMiniboss()
@@ -433,7 +433,7 @@ this.crOrcGrunt <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Skills.removeByID("perk.ptr_kata");	
 		}
 		
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		return true;
 	}	
 

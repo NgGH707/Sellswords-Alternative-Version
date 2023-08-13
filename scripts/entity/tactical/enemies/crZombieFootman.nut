@@ -223,11 +223,11 @@ this.crZombieFootman <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 			if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 			{
 				//this.m.Skills.addTreeOfEquippedWeapon(6);	
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 6);				
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 6);				
 			}
 			else
 			{
-				::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 4);
+				::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 4);
 			}	
 		//}
 			

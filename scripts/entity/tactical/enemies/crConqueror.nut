@@ -89,7 +89,7 @@ this.crConqueror <- this.inherit("scripts/entity/tactical/skeleton", {
 		//{
 		//	this.m.Skills.addTreeOfEquippedWeapon(7);	
 		//}
-		::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+		::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 	}
 
 });

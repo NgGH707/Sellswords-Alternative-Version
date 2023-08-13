@@ -196,11 +196,11 @@ this.crZombieBillman <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 
 		if (("Assets" in this.World) && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
 		{
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this);
 		}
 		else
 		{
-			::Mod_Chirutiru.HookHelper.addTreeOfEquippedWeapon(this, 5);
+			::Mod_Sellswords.HookHelper.addTreeOfEquippedWeapon(this, 5);
 		}	
 	}
 });
