@@ -21,7 +21,7 @@ this.named_sword_abt_zhanlu <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.Condition = 72.0;
 		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -8;
-		this.m.Value = 5000;
+		this.m.Value = 15000;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 65;
 		this.m.ArmorDamageMult = 1.15;
@@ -35,7 +35,7 @@ this.named_sword_abt_zhanlu <- this.inherit("scripts/items/weapons/weapon", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "The Action Point costs of sword skills is reduced by [color=" + this.Const.UI.Color.PositiveValue + "]1[/color], besides \'Kata Step\' costs less"
+			text = "The Action Point costs of sword skills is reduced by [color=" + this.Const.UI.Color.PositiveValue + "]1[/color] as well as \'Kata Step\'"
 		});
 		if (this.m.innateperk)
 		{
