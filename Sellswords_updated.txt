@@ -1,0 +1,24 @@
+Sellswords Updated.
+-----
+
+To read all the various changes this overhaul mod adds you can read up on it at their Nexus page
+https://www.nexusmods.com/battlebrothers/mods/606   Important to note here, our SS version
+is based off 5.4 not the latest SS version on Nexus so we have some of the newer features missing.
+-----
+
+Required Mods.
+-Latest Legends.
+-Latest MSU.
+-PTR is optional, our version can be played with or without it.
+-AC mod is optional but there is some special hooks made by Emo for maximum compatibility.
+
+Mod Compatibility Suggestions:
+This is a major overhaul mod untop of PTR (if you're running PTR) and that untop of Legends latest.
+So many submods do not work with this, keep the mod list short mainly QoL mods avoid content+,
+origin mods.
+-----
+
+A giant thank you to Necro, Emo Used HM01, Barcode and all the others who have helped develop and 
+playtest SSU (Sellswords Updated). 
+
+
